@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
 
+    private EventInstance musicEventInstance;
+
     private void Awake()
     {
         if (instance != null)
@@ -15,6 +17,11 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Found more than one Audio Manager in the scene");
         }
         instance = this;
+    }
+
+    private void Start()
+    {
+        InitializeMusic(FMODEvents.instance.music);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
@@ -31,5 +38,13 @@ public class AudioManager : MonoBehaviour
         //Si on veut faire des loops reprendre la vidéo à 24:00
     }
 
+    private void InitializeMusic(EventReference musicEventReference)
+    {
+        musicEventInstance = CreateEventInstance(musicEventReference);
+        musicEventInstance.start();
+
+    }
+
     //Regarder la vidéo à 26:00 pour des sons se basant sur la distance/spatialisation
+    //Crossfading music à 39:00
 }
