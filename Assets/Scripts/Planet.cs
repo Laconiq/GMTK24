@@ -21,15 +21,18 @@ public class Planet : MonoBehaviour
             return;
 
         var directionToSun = _sun.transform.position - transform.position;
-        var distanceToSun = directionToSun.magnitude;
+        var distanceToSun = directionToSun.sqrMagnitude;
 
         if (distanceToSun > _sun.maxRange)
+        {
+            Debug.Log("Maxrange reached");
             return;
+        }
 
         var forceDirection = directionToSun.normalized;
-        var forceMagnitude = _sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
+        var force = forceDirection * _sun.gravitationalConstant * _sun.GetComponent<Rigidbody>().mass / distanceToSun;
+        Debug.Log("force"+force);
 
-        var force = forceDirection * forceMagnitude;
         _rb.AddForce(force);
     }
 
