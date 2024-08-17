@@ -5,10 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     
-    [SerializeField] private CueController cueController;
-    [SerializeField] private PlacingBallController placingBallController;
-    [SerializeField] private PlayerController playerController;
-    
+    private CueController _cueController;
+    private PlacingBallController _placingBallController;
+    private PlayerController _playerController;
+    private CameraController _cameraController;
     private GameState _gameState;
     private Planet _currentPlanet;
     
@@ -24,7 +24,12 @@ public class GameManager : MonoBehaviour
     
     public PlacingBallController GetPlacingBallController()
     {
-        return placingBallController;
+        return _placingBallController;
+    }
+    
+    public CueController GetCueController()
+    {
+        return _cueController;
     }
 
     public enum GameState
@@ -55,7 +60,24 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        playerController.Initialize();
+        _playerController = FindObjectOfType<PlayerController>();
+        if (_playerController is null)
+            Debug.LogError("PlayerController not found in scene");
+        
+        _cameraController = FindObjectOfType<CameraController>();
+        if (_cameraController is null)
+            Debug.LogError("CameraController not found in scene");
+        
+        _cueController = FindObjectOfType<CueController>();
+        if (_cueController is null)
+            Debug.LogError("CueController not found in scene");
+        
+        _placingBallController = FindObjectOfType<PlacingBallController>();
+        if (_placingBallController is null)
+            Debug.LogError("PlacingBallController not found in scene");
+        
+        _playerController?.Initialize();
+        _cameraController?.Initialize();
         SetState(GameState.PlacingBall);
     }
     
@@ -68,16 +90,16 @@ public class GameManager : MonoBehaviour
         switch (_gameState)
         {
             case GameState.PlacingBall:
-                cueController.DisableControls();
-                placingBallController.EnableControls();
+                _cueController.DisableControls();
+                _placingBallController.EnableControls();
                 break;
             case GameState.Charging:
-                cueController.EnableControls();
-                placingBallController.DisableControls();
+                _cueController.EnableControls();
+                _placingBallController.DisableControls();
                 break;
             case GameState.Shooting:
-                cueController.DisableControls();
-                placingBallController.DisableControls();
+                _cueController.DisableControls();
+                _placingBallController.DisableControls();
                 SetCurrentPlanet(null);
                 Invoke(nameof(SetStatePlacingBall), 3f);
                 break;
