@@ -79,9 +79,15 @@ public class GameManager : MonoBehaviour
                 cueController.DisableControls();
                 placingBallController.DisableControls();
                 SetCurrentPlanet(null);
+                Invoke(nameof(SetStatePlacingBall), 3f);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
+    }
+    
+    private void SetStatePlacingBall()
+    {
+        SetState(GameState.PlacingBall);
     }
 }

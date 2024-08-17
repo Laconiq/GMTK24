@@ -10,6 +10,7 @@ public class PlacingBallController : MonoBehaviour
     public void EnableControls()
     {
         _isControllerActive = true;
+        _planetInstance = null;
         ChangePlanet(defaultPlanetPrefab);
     }
 

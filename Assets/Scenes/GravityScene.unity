@@ -134,14 +134,12 @@ PrefabInstance:
         type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 1975075142375508922, guid: caacd396b6857cc468f1316d88078fbf,
-        type: 3}
+      objectReference: {fileID: 1460777679}
     - target: {fileID: 2333256312723361674, guid: 9e6c392a947c16f499bfd5cff158714b,
         type: 3}
       propertyPath: shootPreview
       value: 
-      objectReference: {fileID: 2748285007679875611, guid: f05ae32961e48e644ac0389677763f5e,
-        type: 3}
+      objectReference: {fileID: 408053897291121971}
     - target: {fileID: 5026261623061442113, guid: 9e6c392a947c16f499bfd5cff158714b,
         type: 3}
       propertyPath: m_Name
