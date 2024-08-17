@@ -124,8 +124,8 @@ Material:
     - _SpeedBlink: 0.005
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
-    - _StarsDens: 137.5
-    - _StarsPow: 35.8
+    - _StarsDens: 88.24
+    - _StarsPow: 80
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
