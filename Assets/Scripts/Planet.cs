@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    public Sun sun;
+    private Sun _sun;
     private Rigidbody _rb;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _sun = FindObjectOfType<Sun>();
+        
         InitializePlanet(new Vector3(5, 5, 0));
     }
 
@@ -18,13 +20,13 @@ public class Planet : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (sun is null)
+        if (_sun is null)
             return;
 
-        var directionToSun = sun.transform.position - transform.position;
+        var directionToSun = _sun.transform.position - transform.position;
         var distanceToSun = directionToSun.magnitude;
 
-        if (distanceToSun > sun.maxRange)
+        if (distanceToSun > _sun.maxRange)
             return;
 
         var velocity = _rb.velocity;
@@ -33,10 +35,10 @@ public class Planet : MonoBehaviour
         var forceDirection = directionToSun.normalized;
         float forceMagnitude;
 
-        if (currentSpeed < sun.gravitationalConstant / distanceToSun)
-            forceMagnitude = sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
+        if (currentSpeed < _sun.gravitationalConstant / distanceToSun)
+            forceMagnitude = _sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
         else
-            forceMagnitude = sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
+            forceMagnitude = _sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
 
         var force = forceDirection * forceMagnitude;
         _rb.AddForce(force);
