@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class CueController : MonoBehaviour
 {
+    public float forceModifier = 0;
     private bool _isCharging;
     private Vector3 _initialMousePosition;
     private Vector3 _forceVector;
@@ -57,7 +58,7 @@ public class CueController : MonoBehaviour
 
         var distance = direction.magnitude;
         _forceVector = direction.normalized * distance;
-        _forceVector /= -100;
+        _forceVector /= forceModifier;
     }
 
     private void ApplyForce()
