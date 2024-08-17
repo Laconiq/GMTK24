@@ -3,12 +3,13 @@ using UnityEngine.InputSystem;
 
 public class CueController : MonoBehaviour
 {
-    public float forceModifier = 0;
+    public float forceModifier;
     private bool _isCharging;
     private Vector3 _initialMousePosition;
     private Vector3 _forceVector;
     private Controls _controls;
-
+    
+    [SerializeField] private ShootPreview shootPreview;
     public void Initialize()
     {
         _controls = new Controls();
@@ -47,8 +48,9 @@ public class CueController : MonoBehaviour
 
     private void StartCharging()
     {
-        _isCharging = true;
         _initialMousePosition = Mouse.current.position.ReadValue();
+        shootPreview.EnableLine();
+        _isCharging = true;
     }
 
     private void ChargeShot()
@@ -59,6 +61,9 @@ public class CueController : MonoBehaviour
         var distance = direction.magnitude;
         _forceVector = direction.normalized * distance;
         _forceVector *= -forceModifier;
+
+        var endPosition = GameManager.instance.GetCurrentPlanet().transform.position + _forceVector;
+        shootPreview.DrawLine(endPosition);
     }
 
     private void ApplyForce()
@@ -68,6 +73,7 @@ public class CueController : MonoBehaviour
             return;
         var planetScript = ballInstance.GetComponent<Planet>();
         planetScript?.SetVelocity(_forceVector);
+        shootPreview.DisableLine();
         GameManager.instance.SetState(GameManager.GameState.Shooting);
     }
 }
