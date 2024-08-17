@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private CueController _cueController;
     private UIManager _uiManager;
     private Coroutine _checkUIElementUnderMouseCoroutine;
+    private CameraController _cameraController;
 
     private Controls _controls;
 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
         _gameManager = GameManager.instance;
         _cueController = _gameManager.GetCueController();
         _uiManager = _gameManager.GetUIManager();
+        _cameraController = _gameManager.GetCameraController();
 
         _controls = new Controls();
         _controls.Player.LeftClick.performed += _ => PressLeftClick();
@@ -34,7 +36,12 @@ public class PlayerController : MonoBehaviour
         switch (_gameManager.GetGameState())
         {
             case GameManager.GameState.PlacingBall:
-                GameManager.instance.SetState(GameManager.GameState.Charging);
+                if (_gameManager.GetCurrentPlanet().IsPlanetHidden() && !_gameManager.GetCameraController().IsLookingAtPlanet())
+                    _cameraController.LookAt(_nearestCelestial);
+                else if (_gameManager.GetCameraController().IsLookingAtPlanet())
+                    _cameraController.LookAt(null);
+                else 
+                    GameManager.instance.SetState(GameManager.GameState.Charging);
                 break;
             case GameManager.GameState.Charging:
                 break;
@@ -95,6 +102,12 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    private Transform _nearestCelestial;
+    public void SetNearestCelestial(Transform celestial)
+    {
+        _nearestCelestial = celestial;
+    }
+
     private Button _lastButtonClicked;
     private IEnumerator CheckUIElementUnderMouseCoroutine()
     {

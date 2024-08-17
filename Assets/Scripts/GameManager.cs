@@ -93,5 +93,7 @@ public class GameManager : MonoBehaviour
     public PlacingBallController GetPlacingBallController() { return _placingBallController; }
     public UIManager GetUIManager() { return _uiManager; }
     public CueController GetCueController() { return _cueController; }
+    public CameraController GetCameraController() { return _cameraController; }
     public GameState GetGameState() { return _gameState; }
+    public PlayerController GetPlayerController() { return _playerController; }
 }

@@ -16,6 +16,7 @@ public class PlacingBallController : MonoBehaviour
 
     public void DisableControls()
     {
+        _planetInstance = null;
         _isControllerActive = false;
     }
 
