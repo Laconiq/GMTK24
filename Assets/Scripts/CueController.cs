@@ -8,49 +8,32 @@ public class CueController : MonoBehaviour
     private Vector3 _initialMousePosition;
     private Vector3 _forceVector;
     private Controls _controls;
+    private bool _isControllerActive;
     
     [SerializeField] private ShootPreview shootPreview;
-    public void Initialize()
-    {
-        _controls = new Controls();
-        _controls.Player.LeftClick.performed += OnLeftClickPerformed;
-        _controls.Player.LeftClick.canceled += OnLeftClickCanceled;
-    }
     
     public void EnableControls()
     {
-        _controls.Enable();
+        _isControllerActive = true;
+        StartCharging();
     }
     
     public void DisableControls()
     {
-        _controls.Disable();
-    }
-
-    private void OnLeftClickPerformed(InputAction.CallbackContext context)
-    {
-        StartCharging();
-    }
-
-    private void OnLeftClickCanceled(InputAction.CallbackContext context)
-    {
-        if (!_isCharging) 
-            return;
-        _isCharging = false;
-        ApplyForce();
+        _isControllerActive = false;
     }
 
     private void Update()
     {
-        if (_isCharging)
-            ChargeShot();
+        if (!_isControllerActive)
+            return;
+        ChargeShot();
     }
 
     private void StartCharging()
     {
         _initialMousePosition = Mouse.current.position.ReadValue();
         shootPreview.EnableLine();
-        _isCharging = true;
     }
 
     private void ChargeShot()
@@ -66,8 +49,10 @@ public class CueController : MonoBehaviour
         shootPreview.DrawLine(endPosition);
     }
 
-    private void ApplyForce()
+    public void ApplyForce()
     {
+        if (!_isControllerActive)
+            return;
         var ballInstance = GameManager.instance.GetCurrentPlanet()?.gameObject;
         if (ballInstance is null) 
             return;

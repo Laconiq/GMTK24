@@ -5,6 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     
+    [SerializeField] private CueController cueController;
+    [SerializeField] private PlacingBallController placingBallController;
+    [SerializeField] private PlayerController playerController;
+    
     private GameState _gameState;
     private Planet _currentPlanet;
     
@@ -30,8 +34,10 @@ public class GameManager : MonoBehaviour
         Shooting
     }
     
-    [SerializeField] private CueController cueController;
-    [SerializeField] private PlacingBallController placingBallController;
+    public GameState GetGameState()
+    {
+        return _gameState;
+    }
     
     private void Awake()
     {
@@ -49,8 +55,7 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        cueController.Initialize();
-        placingBallController.Initialize();
+        playerController.Initialize();
         SetState(GameState.PlacingBall);
     }
     
@@ -58,23 +63,22 @@ public class GameManager : MonoBehaviour
     {
         _gameState = state;
         
+        Debug.Log("State changed to " + _gameState);
+        
         switch (_gameState)
         {
             case GameState.PlacingBall:
                 cueController.DisableControls();
                 placingBallController.EnableControls();
-                Debug.Log("State is PlacingBall");
                 break;
             case GameState.Charging:
                 cueController.EnableControls();
                 placingBallController.DisableControls();
-                Debug.Log("State is Charging");
                 break;
             case GameState.Shooting:
                 cueController.DisableControls();
                 placingBallController.DisableControls();
                 SetCurrentPlanet(null);
-                Debug.Log("State is Shooting");
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

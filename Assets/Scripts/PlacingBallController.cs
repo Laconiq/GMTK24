@@ -5,26 +5,17 @@ public class PlacingBallController : MonoBehaviour
 {
     [SerializeField] private GameObject defaultPlanetPrefab;
     private GameObject _planetInstance;
-    private Controls _controls;
-    private bool _isActive;
-
-    public void Initialize()
-    {
-        _controls = new Controls();
-        _controls.Player.LeftClick.performed += _ => GameManager.instance.SetState(GameManager.GameState.Charging);
-    }
+    private bool _isControllerActive;
 
     public void EnableControls()
     {
-        _controls.Enable();
-        _isActive = true;
+        _isControllerActive = true;
         ChangePlanet(defaultPlanetPrefab);
     }
 
     public void DisableControls()
     {
-        _controls.Disable();
-        _isActive = false;
+        _isControllerActive = false;
     }
 
     private void Update()
@@ -42,7 +33,7 @@ public class PlacingBallController : MonoBehaviour
 
     private void FollowMouse()
     {
-        if (!_isActive)
+        if (!_isControllerActive)
             return;
         var mousePosition = Mouse.current.position.ReadValue();
         var ray = Camera.main!.ScreenPointToRay(mousePosition);

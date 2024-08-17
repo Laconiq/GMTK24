@@ -147,12 +147,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55202806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1509598496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &55202808
 MonoBehaviour:
@@ -453,7 +453,7 @@ MonoBehaviour:
     GameObject: {fileID: 493669636}
     Ordinal: 2
     Priority: 0
-    IconType: 103000
+    IconType: 125250
     IconTexture: {fileID: 0}
     IsIconRecursive: 0
     BackgroundType: 0
@@ -465,7 +465,7 @@ MonoBehaviour:
     GameObject: {fileID: 55202806}
     Ordinal: 3
     Priority: 0
-    IconType: 103000
+    IconType: 125250
     IconTexture: {fileID: 0}
     IsIconRecursive: 0
     BackgroundType: 0
@@ -574,6 +574,18 @@ MonoBehaviour:
     Ordinal: 12
     Priority: 0
     IconType: 269000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 1509598494}
+    Ordinal: 13
+    Priority: 0
+    IconType: 103000
     IconTexture: {fileID: 0}
     IsIconRecursive: 0
     BackgroundType: 0
@@ -844,12 +856,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493669636}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1509598496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &493669638
 MonoBehaviour:
@@ -1307,6 +1319,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cueController: {fileID: 493669638}
   placingBallController: {fileID: 55202808}
+  playerController: {fileID: 1509598495}
+--- !u!1 &1509598494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1509598496}
+  - component: {fileID: 1509598495}
+  m_Layer: 0
+  m_Name: PlayerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1509598495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509598494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cdf5688c15f47008b524a31fbbeff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1460777679}
+  placingBallController: {fileID: 55202808}
+  cueController: {fileID: 493669638}
+--- !u!4 &1509598496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509598494}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 493669637}
+  - {fileID: 55202807}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2102359148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
@@ -1686,10 +1748,9 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 7160929101492901476}
   - {fileID: 1460777678}
-  - {fileID: 493669637}
-  - {fileID: 55202807}
   - {fileID: 380791953}
   - {fileID: 8256227374772380361}
   - {fileID: 1115383540}
   - {fileID: 120513871}
   - {fileID: 389409723}
+  - {fileID: 1509598496}
