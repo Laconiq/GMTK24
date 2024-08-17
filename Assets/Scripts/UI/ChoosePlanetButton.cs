@@ -20,13 +20,11 @@ public class ChoosePlanetButton : MonoBehaviour
     
     public void HoverEnter()
     {
-        Debug.Log("HoverEnter");
         _animator.SetBool(IsHover, true);
     }
     
     public void HoverExit()
     {
-        Debug.Log("HoverExit");
         _animator.SetBool(IsHover, false);
     }
 }

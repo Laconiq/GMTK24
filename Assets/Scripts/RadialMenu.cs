@@ -7,7 +7,8 @@ public class RadialMenu : MonoBehaviour
     public void ArrangeChildrenInCircle()
     {
         var childCount = transform.childCount;
-        if (childCount == 0) return;
+        if (childCount == 0) 
+            return;
 
         var angleStep = 360f / childCount;
 

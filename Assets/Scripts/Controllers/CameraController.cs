@@ -50,12 +50,14 @@ public class CameraController : MonoBehaviour
             lookAtCamera.Priority = 9;
             _virtualCamera.Priority = 11;
             
-            GameManager.instance.GetCurrentPlanet().SetPlanetVisibility();
+            GameManager.instance.GetCurrentPlanet().SetPlanetVisibility(true);
         }
         else
         {
             lookAtCamera.Priority = 11;
             _virtualCamera.Priority = 9;
+            
+            GameManager.instance.GetCurrentPlanet().SetPlanetVisibility(false);
             
             _isLookingAtPlanet = true;
         }

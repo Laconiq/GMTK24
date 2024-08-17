@@ -1,3 +1,4 @@
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class Planet : MonoBehaviour
@@ -9,6 +10,10 @@ public class Planet : MonoBehaviour
     private bool _isHidden;
     private PlayerController _playerController;
     private CameraController _cameraController;
+    private GameObject _model;
+    
+    [SerializeField] private MMF_Player growFeedback;
+    [SerializeField] private MMF_Player shrinkFeedback;
 
     private void Start()
     {
@@ -17,6 +22,8 @@ public class Planet : MonoBehaviour
         _rb.isKinematic = true;
         _playerController = GameManager.instance.GetPlayerController();
         _cameraController = GameManager.instance.GetCameraController();
+        _model = transform.GetChild(0).gameObject;
+        growFeedback.PlayFeedbacks();
     }
 
     public void SetVelocity(Vector3 velocity)
@@ -42,12 +49,6 @@ public class Planet : MonoBehaviour
         var directionToSun = _sun.transform.position - transform.position;
         var distanceToSun = directionToSun.sqrMagnitude;
 
-        if (distanceToSun > _sun.maxRange)
-        {
-            Debug.Log("Max range reached");
-            //return;
-        }
-
         var forceDirection = directionToSun.normalized;
         var force = forceDirection * (_sun.gravitationalConstant * (_sunMass * _rb.mass / distanceToSun));
 
@@ -56,30 +57,33 @@ public class Planet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Celestial") && !_isInitialized)
+        if (other.CompareTag("Celestial") && !_isInitialized && !_isHidden)
         {
-            Debug.Log("Celestial entered");
             _isHidden = true;
-            SetPlanetVisibility();
+            if (growFeedback.IsPlaying)
+                growFeedback.StopFeedbacks();
+            shrinkFeedback.PlayFeedbacks();
             _playerController.SetNearestCelestial(other.transform);
         }
     }
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Celestial") && !_isInitialized)
+        if (other.CompareTag("Celestial") && !_isInitialized && _isHidden)
         {
-            Debug.Log("Celestial exited");
             _isHidden = false;
             _playerController.SetNearestCelestial(null);
-            if (!_cameraController.IsLookingAtPlanet())
-                SetPlanetVisibility();
+            if (_cameraController.IsLookingAtPlanet()) 
+                return;
+            if (shrinkFeedback.IsPlaying)
+                shrinkFeedback.StopFeedbacks();
+            growFeedback.PlayFeedbacks();
         }
     }
 
-    public void SetPlanetVisibility()
+    public void SetPlanetVisibility(bool b)
     {
-        transform.GetChild(0).gameObject.SetActive(!_isHidden);
+        _model.SetActive(b);
     }
     
     // Getter and setter

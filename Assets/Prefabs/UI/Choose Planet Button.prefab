@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca1caeb1cfd924e4291bbe4bcbf197a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4040431a8ab4844d888809686f26256, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -463,7 +463,7 @@ MonoBehaviour:
         DebugActive: 0
         Mode: 0
         AnimateScaleTarget: {fileID: 1015957140573665145}
-        AnimateScaleDuration: 0.2
+        AnimateScaleDuration: 0.3
         RemapCurveZero: 0
         RemapCurveOne: 1
         Offset: 0
