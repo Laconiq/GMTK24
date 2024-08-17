@@ -7,10 +7,7 @@ public class Planet : MonoBehaviour
 
     private void Start()
     {
-        _rb = GetComponent<Rigidbody>();
-        _sun = FindObjectOfType<Sun>();
-        
-        InitializePlanet(new Vector3(5, 5, 0));
+        //InitializePlanet(new Vector3(5, 5, 0));
     }
 
     private void FixedUpdate()
@@ -29,23 +26,19 @@ public class Planet : MonoBehaviour
         if (distanceToSun > _sun.maxRange)
             return;
 
-        var velocity = _rb.velocity;
-        var currentSpeed = velocity.magnitude;
-
         var forceDirection = directionToSun.normalized;
-        float forceMagnitude;
-
-        if (currentSpeed < _sun.gravitationalConstant / distanceToSun)
-            forceMagnitude = _sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
-        else
-            forceMagnitude = _sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
+        var forceMagnitude = _sun.gravitationalConstant * _rb.mass / (distanceToSun * distanceToSun);
 
         var force = forceDirection * forceMagnitude;
         _rb.AddForce(force);
     }
 
-    private void InitializePlanet(Vector3 velocity)
+    public void InitializePlanet(Vector3 velocity)
     {
+        Debug.Log("Initializing planet");
+        _rb = GetComponent<Rigidbody>();
+        _sun = FindObjectOfType<Sun>();
+        
         _rb.velocity = velocity;
     }
 }
