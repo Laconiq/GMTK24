@@ -181,8 +181,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 7000
+  field of view: 72
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -209,8 +209,8 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 105.1, z: -63.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 2949, z: -1570}
+  m_LocalScale: {x: 1.2475, y: 1.2475, z: 1.0120158}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -526,6 +526,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17843980087724166, guid: f05ae32961e48e644ac0389677763f5e,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 72.36542
+      objectReference: {fileID: 0}
+    - target: {fileID: 17843980087724166, guid: f05ae32961e48e644ac0389677763f5e,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 17843980087724166, guid: f05ae32961e48e644ac0389677763f5e,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 990419139027390415, guid: f05ae32961e48e644ac0389677763f5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -700,6 +715,11 @@ PrefabInstance:
       propertyPath: shootPreview
       value: 
       objectReference: {fileID: 379338041}
+    - target: {fileID: 2333256312723361674, guid: 9e6c392a947c16f499bfd5cff158714b,
+        type: 3}
+      propertyPath: forceModifier
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5026261623061442113, guid: 9e6c392a947c16f499bfd5cff158714b,
         type: 3}
       propertyPath: m_Name
@@ -885,7 +905,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 20}
+  m_LocalScale: {x: 2000, y: 1, z: 2000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -903,10 +923,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 1862056104238771750, guid: 55aa4b1afb3d043db91baa897739d09c,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100000000
+      objectReference: {fileID: 0}
     - target: {fileID: 5619637899778751223, guid: 55aa4b1afb3d043db91baa897739d09c,
         type: 3}
       propertyPath: gravitationalConstant
-      value: 0.1
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579202514601564464, guid: 55aa4b1afb3d043db91baa897739d09c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579202514601564464, guid: 55aa4b1afb3d043db91baa897739d09c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7579202514601564464, guid: 55aa4b1afb3d043db91baa897739d09c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7579202514601564464, guid: 55aa4b1afb3d043db91baa897739d09c,
         type: 3}
