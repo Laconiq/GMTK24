@@ -63,8 +63,6 @@ public class GameManager : MonoBehaviour
     {
         _gameState = state;
         
-        Debug.Log("State changed to " + _gameState);
-        
         switch (_gameState)
         {
             case GameState.PlacingBall:

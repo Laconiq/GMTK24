@@ -903,6 +903,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sun
       objectReference: {fileID: 0}
+    - target: {fileID: 5619637899778751223, guid: 55aa4b1afb3d043db91baa897739d09c,
+        type: 3}
+      propertyPath: planetName
+      value: Soleil
+      objectReference: {fileID: 0}
     - target: {fileID: 7579202514601564464, guid: 55aa4b1afb3d043db91baa897739d09c,
         type: 3}
       propertyPath: m_LocalPosition.x
