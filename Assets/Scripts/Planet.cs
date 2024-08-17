@@ -4,12 +4,18 @@ public class Planet : MonoBehaviour
 {
     private Sun _sun;
     private Rigidbody _rb;
+    private bool _isInitialized;
 
-    private void Start()
+    public void SetVelocity(Vector3 velocity)
     {
-        //InitializePlanet(new Vector3(5, 5, 0));
+        _rb = GetComponent<Rigidbody>();
+        _sun = FindObjectOfType<Sun>();
+        GetComponent<TrailRenderer>().enabled = true;
+        
+        _rb.velocity = velocity;
+        _isInitialized = true;
     }
-
+    
     private void FixedUpdate()
     {
         ApplyGravity();
@@ -17,7 +23,7 @@ public class Planet : MonoBehaviour
 
     private void ApplyGravity()
     {
-        if (_sun is null)
+        if (_sun is null || !_isInitialized)
             return;
 
         var directionToSun = _sun.transform.position - transform.position;
@@ -34,14 +40,5 @@ public class Planet : MonoBehaviour
         Debug.Log("force"+force);
 
         _rb.AddForce(force);
-    }
-
-    public void InitializePlanet(Vector3 velocity)
-    {
-        Debug.Log("Initializing planet");
-        _rb = GetComponent<Rigidbody>();
-        _sun = FindObjectOfType<Sun>();
-        
-        _rb.velocity = velocity;
     }
 }

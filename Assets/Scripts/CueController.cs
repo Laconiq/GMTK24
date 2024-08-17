@@ -67,7 +67,7 @@ public class CueController : MonoBehaviour
         if (ballInstance is null) 
             return;
         var planetScript = ballInstance.GetComponent<Planet>();
-        planetScript?.InitializePlanet(_forceVector);
+        planetScript?.SetVelocity(_forceVector);
         GameManager.instance.SetState(GameManager.GameState.Shooting);
     }
 }
