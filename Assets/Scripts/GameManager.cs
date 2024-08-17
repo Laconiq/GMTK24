@@ -9,28 +9,9 @@ public class GameManager : MonoBehaviour
     private PlacingBallController _placingBallController;
     private PlayerController _playerController;
     private CameraController _cameraController;
-    private GameState _gameState;
+    private UIManager _uiManager;
     private Planet _currentPlanet;
-    
-    public void SetCurrentPlanet(Planet planet)
-    {
-        _currentPlanet = planet;
-    }
-    
-    public Planet GetCurrentPlanet()
-    {
-        return _currentPlanet;
-    }
-    
-    public PlacingBallController GetPlacingBallController()
-    {
-        return _placingBallController;
-    }
-    
-    public CueController GetCueController()
-    {
-        return _cueController;
-    }
+    private GameState _gameState;
 
     public enum GameState
     {
@@ -39,27 +20,19 @@ public class GameManager : MonoBehaviour
         Shooting
     }
     
-    public GameState GetGameState()
-    {
-        return _gameState;
-    }
-    
     private void Awake()
     {
         if (instance is null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
             Initialize();
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
     private void Initialize()
     {
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+        
         _playerController = FindObjectOfType<PlayerController>();
         if (_playerController is null)
             Debug.LogError("PlayerController not found in scene");
@@ -76,6 +49,11 @@ public class GameManager : MonoBehaviour
         if (_placingBallController is null)
             Debug.LogError("PlacingBallController not found in scene");
         
+        _uiManager = FindObjectOfType<UIManager>();
+        if (_uiManager is null)
+            Debug.LogError("UIManager not found in scene");
+        
+        _uiManager?.Initialize();
         _playerController?.Initialize();
         _cameraController?.Initialize();
         SetState(GameState.PlacingBall);
@@ -108,8 +86,12 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    private void SetStatePlacingBall()
-    {
-        SetState(GameState.PlacingBall);
-    }
+    // Getters and Setters
+    private void SetStatePlacingBall() { SetState(GameState.PlacingBall); }
+    public void SetCurrentPlanet(Planet planet) { _currentPlanet = planet; }
+    public Planet GetCurrentPlanet() { return _currentPlanet; }
+    public PlacingBallController GetPlacingBallController() { return _placingBallController; }
+    public UIManager GetUIManager() { return _uiManager; }
+    public CueController GetCueController() { return _cueController; }
+    public GameState GetGameState() { return _gameState; }
 }
