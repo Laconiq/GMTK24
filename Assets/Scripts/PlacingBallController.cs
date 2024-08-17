@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlacingBallController : MonoBehaviour
 {
-    [SerializeField] private GameObject planetPrefab;
+    [SerializeField] private GameObject defaultPlanetPrefab;
     private GameObject _planetInstance;
     private Controls _controls;
     private bool _isActive;
@@ -18,7 +18,7 @@ public class PlacingBallController : MonoBehaviour
     {
         _controls.Enable();
         _isActive = true;
-        PlacePlanet();
+        ChangePlanet(defaultPlanetPrefab);
     }
 
     public void DisableControls()
@@ -31,11 +31,11 @@ public class PlacingBallController : MonoBehaviour
     {
         FollowMouse();
     }
-
-    private void PlacePlanet()
+    
+    public void ChangePlanet(GameObject planetPrefab)
     {
-        if (_planetInstance != null) 
-            return;
+        if (_planetInstance != null)
+            Destroy(_planetInstance);
         _planetInstance = Instantiate(planetPrefab, Vector3.zero, Quaternion.identity);
         GameManager.instance.SetCurrentPlanet(_planetInstance.GetComponent<Planet>());
     }

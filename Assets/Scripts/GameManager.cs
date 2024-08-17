@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     {
         return _currentPlanet;
     }
+    
+    public PlacingBallController GetPlacingBallController()
+    {
+        return placingBallController;
+    }
 
     public enum GameState
     {
