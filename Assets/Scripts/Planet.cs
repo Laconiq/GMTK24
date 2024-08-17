@@ -7,10 +7,16 @@ public class Planet : MonoBehaviour
     private float _sunMass;
     private bool _isInitialized;
 
-    public void SetVelocity(Vector3 velocity)
+    private void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _sun = FindObjectOfType<Sun>();
+        _rb.isKinematic = true;
+    }
+
+    public void SetVelocity(Vector3 velocity)
+    {
+        _rb.isKinematic = false;
         GetComponent<TrailRenderer>().enabled = true;
         
         _rb.velocity = velocity;

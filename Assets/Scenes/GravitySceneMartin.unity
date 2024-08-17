@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f304d71d5b66842019aca6b16429023c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planetPrefab: {fileID: 7679218976506164212, guid: c66598e07c4ec4a909d812a4ead39ae4,
-    type: 3}
+  defaultPlanetPrefab: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceModifier: 0.05
+  shootPreview: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,31 +745,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sun
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862056104238771750, guid: 55aa4b1afb3d043db91baa897739d09c,
-        type: 3}
-      propertyPath: m_Mass
-      value: 100000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862056104238771750, guid: 55aa4b1afb3d043db91baa897739d09c,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1862056104238771750, guid: 55aa4b1afb3d043db91baa897739d09c,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5619637899778751223, guid: 55aa4b1afb3d043db91baa897739d09c,
-        type: 3}
-      propertyPath: maxRange
-      value: 1000000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5619637899778751223, guid: 55aa4b1afb3d043db91baa897739d09c,
-        type: 3}
-      propertyPath: gravitationalConstant
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7579202514601564464, guid: 55aa4b1afb3d043db91baa897739d09c,
         type: 3}
