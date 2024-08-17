@@ -34,11 +34,11 @@ public class Planet : MonoBehaviour
         if (distanceToSun > _sun.maxRange)
         {
             Debug.Log("Max range reached");
-            return;
+            //return;
         }
 
         var forceDirection = directionToSun.normalized;
-        var force = forceDirection * (_sun.gravitationalConstant * _sunMass / distanceToSun);
+        var force = forceDirection * (_sun.gravitationalConstant * (_sunMass * _rb.mass/ distanceToSun));
 
         _rb.AddForce(force);
     }
