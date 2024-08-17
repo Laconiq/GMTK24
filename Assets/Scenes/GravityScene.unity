@@ -572,6 +572,30 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 671995695}
+    Ordinal: 20
+    Priority: 0
+    IconType: 320000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 1940520727}
+    Ordinal: 21
+    Priority: 0
+    IconType: 320000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
 --- !u!4 &380791953
 Transform:
   m_ObjectHideFlags: 1
@@ -817,6 +841,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1809604044841107752}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &671995695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1167923524208929188, guid: 0d56b171976ef4410a1f286d91a050ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 6036681900834566838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1046,12 @@ MonoBehaviour:
 --- !u!1 &1803850368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1995148647642332285, guid: 0d56b171976ef4410a1f286d91a050ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 6036681900834566838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1940520727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5565964042829869419, guid: 0d56b171976ef4410a1f286d91a050ad,
     type: 3}
   m_PrefabInstance: {fileID: 6036681900834566838}
   m_PrefabAsset: {fileID: 0}
