@@ -58,7 +58,7 @@ public class CueController : MonoBehaviour
 
         var distance = direction.magnitude;
         _forceVector = direction.normalized * distance;
-        _forceVector /= forceModifier;
+        _forceVector *= -forceModifier;
     }
 
     private void ApplyForce()

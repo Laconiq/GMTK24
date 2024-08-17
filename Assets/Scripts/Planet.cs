@@ -39,7 +39,6 @@ public class Planet : MonoBehaviour
 
         var forceDirection = directionToSun.normalized;
         var force = forceDirection * (_sun.gravitationalConstant * _sunMass / distanceToSun);
-        Debug.Log("force"+force);
 
         _rb.AddForce(force);
     }
