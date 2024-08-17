@@ -4,6 +4,7 @@ public class Planet : MonoBehaviour
 {
     private Sun _sun;
     private Rigidbody _rb;
+    private float _sunMass;
     private bool _isInitialized;
 
     public void SetVelocity(Vector3 velocity)
@@ -13,6 +14,7 @@ public class Planet : MonoBehaviour
         GetComponent<TrailRenderer>().enabled = true;
         
         _rb.velocity = velocity;
+        _sunMass = _sun.GetComponent<Rigidbody>().mass;
         _isInitialized = true;
     }
     
@@ -31,12 +33,12 @@ public class Planet : MonoBehaviour
 
         if (distanceToSun > _sun.maxRange)
         {
-            Debug.Log("Maxrange reached");
+            Debug.Log("Max range reached");
             return;
         }
 
         var forceDirection = directionToSun.normalized;
-        var force = forceDirection * _sun.gravitationalConstant * _sun.GetComponent<Rigidbody>().mass / distanceToSun;
+        var force = forceDirection * (_sun.gravitationalConstant * _sunMass / distanceToSun);
         Debug.Log("force"+force);
 
         _rb.AddForce(force);
