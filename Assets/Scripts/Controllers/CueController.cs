@@ -14,6 +14,8 @@ public class CueController : MonoBehaviour
     
     public void EnableControls()
     {
+        shootPreview = FindObjectOfType<ShootPreview>();
+
         if (shootPreview is null)
             Debug.LogError("ShootPreview is not assigned in the inspector");
         
