@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   celestialName: Alala
-  celestialDescription: 
+  celestialDescription: Shiny.
   gravitationalConstant: 0.1
   gravitationalCorrectionForce: 1
   orbitalVelocityThreshold: 5
