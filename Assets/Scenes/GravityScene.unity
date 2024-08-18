@@ -138,6 +138,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2333256312723361674, guid: 9e6c392a947c16f499bfd5cff158714b,
         type: 3}
+      propertyPath: maxForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333256312723361674, guid: 9e6c392a947c16f499bfd5cff158714b,
+        type: 3}
+      propertyPath: minForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333256312723361674, guid: 9e6c392a947c16f499bfd5cff158714b,
+        type: 3}
       propertyPath: shootPreview
       value: 
       objectReference: {fileID: 408053897291121971}
@@ -1189,6 +1199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 8726860459068490931}
+  shortLineColour: {r: 0.13679248, g: 1, b: 0.35005555, a: 1}
+  longLineColour: {r: 1, g: 0, b: 0.21404552, a: 1}
 --- !u!1001 &1809604044841107752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1611,7 +1623,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.7
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1620,7 +1632,7 @@ LineRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 1
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1661,7 +1673,7 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
+    numCapVertices: 90
     alignment: 0
     textureMode: 3
     textureScale: {x: 1, y: 1}
@@ -1679,8 +1691,8 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1460777678}
-  - {fileID: 380791953}
   - {fileID: 8256227374772380361}
+  - {fileID: 380791953}
   - {fileID: 6036681900834566838}
   - {fileID: 120513871}
   - {fileID: 389409723}
