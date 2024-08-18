@@ -10,5 +10,12 @@ public class ChoosePlanetButton : MonoBehaviour
         if (planetPrefab == null)
             return;
         GameManager.Instance.GetPlacingBallController().ChangePlanet(planetPrefab);
+        foreach (FMODEvents.MusicalCelestialObject MCO in FMODEvents.instance.hoverCelestialList)
+        {
+            if (MCO.celestialObject.GetPlanetName() == planetPrefab.GetComponent<Planet>().GetPlanetName())
+            {
+                AudioManager.instance.PlayOneShot(MCO.celestialMusic);
+            }
+        }
     }
 }

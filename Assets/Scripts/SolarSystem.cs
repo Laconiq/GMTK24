@@ -30,20 +30,35 @@ public class SolarSystem : MonoBehaviour
     
     public int CountPlanetsByType(Planet type)
     {
-        return _planets.Count(planet => planet == type);
+        var count = 0;
+        foreach (var planet in _planets)
+        {
+            if (planet.GetPlanetName() == type.GetPlanetName())
+                count++;
+        }
+        Debug.Log("Count of " + type.GetPlanetName() + " : " + count);
+        return count;
     }
 
     private void AddPlanet(Planet planet)
     {
-        if (_planets.Contains(planet)) 
-            return;
+        //if (_planets.Contains(planet)) 
+          //  return;
         _planets.Add(planet);
+        Debug.Log("Planet added: " + planet.GetPlanetName());
+        foreach (FMODEvents.MusicalCelestialObject MCO in FMODEvents.instance.systemeEnterCelestialList)
+        {
+            if (MCO.celestialObject.GetPlanetName() == planet.GetComponent<Planet>().GetPlanetName())
+            {
+                AudioManager.instance.PlayOneShot(MCO.celestialMusic);
+            }
+        }
     }
     
     public void RemovePlanet(Planet planet)
     {
-        if (!_planets.Contains(planet)) 
-            return;
+        //if (!_planets.Contains(planet)) 
+          //  return;
         _planets.Remove(planet);
     }
 }

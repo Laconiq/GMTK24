@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9107464368584821681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-selection-open
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-selection-open
+  Guid:
+    Data1: -42740994
+    Data2: 1101407657
+    Data3: 310992522
+    Data4: -1011352269
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1125
 --- !u!114 &-8246281989899169551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +81,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5000
+--- !u!114 &-8109660383404603904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-3/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7951348669837294757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +131,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2500
+  Length: 1000
 --- !u!114 &-7256805041258785773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +155,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -8109660383404603904}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
@@ -158,7 +210,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -4494062419488488092}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
@@ -177,12 +230,12 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/sfx.bank
   Name: sfx
   StudioPath: bank:/sfx
-  lastModified: 638595990412271362
+  lastModified: 638596024416896988
   FileSizes:
   - Name: Desktop
-    Value: 1190368
+    Value: 998144
   - Name: HTML5
-    Value: 1190368
+    Value: 998144
   Exists: 1
 --- !u!114 &-5761557704128003586
 MonoBehaviour:
@@ -234,7 +287,9 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 8449203541589432666}
+  - {fileID: 6563599454808824013}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
@@ -264,8 +319,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4000
---- !u!114 &-3326714268272400772
+  Length: 1500
+--- !u!114 &-4494062419488488092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,24 +329,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx-gmtk-idle-planet-selection
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-5/Fade-In
   m_EditorClassIdentifier: 
-  Path: event:/sfx-gmtk-idle-planet-selection
-  Guid:
-    Data1: 1124013495
-    Data2: 1267965695
-    Data3: -744015742
-    Data4: 763872345
-  Banks:
-  - {fileID: -6517976523667321379}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 28421
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3060374798077631558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +398,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
+--- !u!114 &-1027288926980087711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-2/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1024923782624703293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,7 +543,6 @@ MonoBehaviour:
   - {fileID: -792860934070419313}
   - {fileID: 7344548740873809041}
   - {fileID: 6837212753731030909}
-  - {fileID: -3326714268272400772}
   - {fileID: -107287914254066814}
   - {fileID: 7011461959918034350}
   - {fileID: -3060374798077631558}
@@ -476,12 +551,16 @@ MonoBehaviour:
   - {fileID: -1024923782624703293}
   - {fileID: -7951348669837294757}
   - {fileID: 5695893854586215646}
+  - {fileID: 3441251292667212454}
+  - {fileID: -9107464368584821681}
+  - {fileID: 1235828046197000407}
+  - {fileID: 2550681744153608523}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6009856303804657315}
   StringsBanks:
   - {fileID: 4800807486540340833}
-  cacheTime: 638595990412271362
+  cacheTime: 638596024416896988
   cacheVersion: 131619
 --- !u!114 &661499807508113867
 MonoBehaviour:
@@ -506,10 +585,89 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 3396943922839520378}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
+--- !u!114 &1235828046197000407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-idle-planet-selection
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-idle-planet-selection
+  Guid:
+    Data1: 1124013495
+    Data2: 1267965695
+    Data3: -744015742
+    Data4: 763872345
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28421
+--- !u!114 &2550681744153608523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-shot
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-shot
+  Guid:
+    Data1: -684425780
+    Data2: 1305319270
+    Data3: 1296977312
+    Data4: -1177055948
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &2706881277633133942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-6/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3197646597427499885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,10 +691,62 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 7722298822273668778}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
+--- !u!114 &3396943922839520378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-7/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3441251292667212454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-selection-close
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-selection-close
+  Guid:
+    Data1: -564123397
+    Data2: 1304866278
+    Data3: 154737296
+    Data4: 125805903
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
 --- !u!114 &3653591424399960886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,10 +770,35 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -1027288926980087711}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
+--- !u!114 &4106357065394045938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-8/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4185989088069906096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,12 +841,12 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638595990412221434
+  lastModified: 638596018675674758
   FileSizes:
   - Name: Desktop
-    Value: 1974
+    Value: 2202
   - Name: HTML5
-    Value: 1974
+    Value: 2202
   Exists: 1
 --- !u!114 &4813353443681839733
 MonoBehaviour:
@@ -655,12 +890,12 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 638595976793744642
+  lastModified: 638596018676776180
   FileSizes:
   - Name: Desktop
-    Value: 12461888
+    Value: 12696352
   - Name: HTML5
-    Value: 12461760
+    Value: 12696224
   Exists: 1
 --- !u!114 &5695893854586215646
 MonoBehaviour:
@@ -731,7 +966,7 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638595976793289242
+  lastModified: 638595974710165312
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -761,10 +996,59 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 6094120198621319000}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
+--- !u!114 &6094120198621319000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-4/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6563599454808824013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-1/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6837212753731030909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,7 +1126,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 4106357065394045938}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
@@ -873,6 +1158,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5000
+--- !u!114 &7722298822273668778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-9/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7732066534868951591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,10 +1259,35 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 2706881277633133942}
   MinDistance: 1
   MaxDistance: 20
   Length: 128000
+--- !u!114 &8449203541589432666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-1/Fade-Out
+  m_EditorClassIdentifier: 
+  Name: Fade-Out
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 278370659
+    data2: 1915730054
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &9033833928979146091
 MonoBehaviour:
   m_ObjectHideFlags: 0

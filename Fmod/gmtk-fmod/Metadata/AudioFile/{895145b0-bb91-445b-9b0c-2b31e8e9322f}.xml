@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{895145b0-bb91-445b-9b0c-2b31e8e9322f}">
 		<property name="assetPath">
-			<value>sfx-gmtk-idle-planet-selection.wav</value>
+			<value>mus-gmtk-idle-planet-selection.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

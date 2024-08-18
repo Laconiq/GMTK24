@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{42ff15b7-9eff-4b93-8238-a7d359c4872d}">
 		<property name="name">
-			<value>sfx-gmtk-idle-planet-selection</value>
+			<value>mus-gmtk-idle-planet-selection</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -32,7 +32,7 @@
 			<destination>{681ba918-0bc0-45d7-9d54-93b2eb96c467}</destination>
 		</relationship>
 		<relationship name="banks">
-			<destination>{1a38e0c3-3d30-42c6-8666-d6d595994db2}</destination>
+			<destination>{4889ef04-9ee9-4c1e-b3ac-e3a207162083}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{e22e3a85-6072-421a-9188-8aa94da112bb}">

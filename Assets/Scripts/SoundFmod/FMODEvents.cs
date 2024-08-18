@@ -26,11 +26,23 @@ public class FMODEvents : MonoBehaviour
     [field: Header("OpenRadialMenu")]
     [field: SerializeField] public EventReference OpenRadialMenu { get; private set; }
 
+    [field: Header("CloseRadialMenu")]
+    [field: SerializeField] public EventReference CloseRadialMenu { get; private set; }
+
+    [field: Header("CueStrike")]
+    [field: SerializeField] public EventReference CueStrike { get; private set; }
+
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
 
     [field: Header("List Objet Music")]
     [field: SerializeField] public MusicalCelestialObject[] musicalCelestialList { get; private set; }
+
+    [field: Header("List Objet Son Hover")]
+    [field: SerializeField] public MusicalCelestialObject[] hoverCelestialList { get; private set; }
+
+    [field: Header("List Objet Son Entrer Systeme")]
+    [field: SerializeField] public MusicalCelestialObject[] systemeEnterCelestialList { get; private set; }
 
     public static FMODEvents instance { get; private set; }
 

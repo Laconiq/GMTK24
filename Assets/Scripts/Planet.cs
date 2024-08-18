@@ -129,7 +129,7 @@ public class Planet : Celestial
             {
                 if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == GetPlanetName())
                 {
-                    //Debug.Log("Count" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
+                    Debug.Log("Exit");
                     if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
                     {
                         VolumeModifier(i, 0);
