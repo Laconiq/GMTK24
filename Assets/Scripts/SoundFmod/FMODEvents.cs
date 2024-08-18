@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+using FMODUnity;
+
+public class FMODEvents : MonoBehaviour
+{
+    //Ref syntaxe
+    //[field: Header("name")]
+    //[field: SerializeField] public EventReference name { get; private set; }
+    [Serializable]
+    public class MusicalCelestialObject
+    {
+        [field: Header("ObjetMusicalCeleste")]
+        [field: SerializeField] public EventReference celestialMusic { get; private set; }
+        [field: SerializeField] public Planet celestialObject { get; private set; }
+    }
+
+    [field: Header("Music")]
+    [field: SerializeField] public EventReference music { get; private set; }
+
+
+    [field: Header("List Objet Music")]
+    [field: SerializeField] public MusicalCelestialObject[] musicalCelestialList { get; private set; }
+
+    public static FMODEvents instance { get; private set; }
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Found more than one FMOD Events in the scene");
+        }
+        instance = this;
+    }
+}
