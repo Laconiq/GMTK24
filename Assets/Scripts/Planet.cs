@@ -154,11 +154,12 @@ public class Planet : Celestial
 
     public void Die()
     {
-        FindObjectOfType<SolarSystem>().RemovePlanet(this);
-        if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
+        var solarSystem = FindObjectOfType<SolarSystem>();
+        solarSystem.RemovePlanet(this);
+        if (solarSystem.CountPlanetsByType(this) <= 0)
         {
             VolumeModifier(_indexAudioManager, 0);
-            Debug.Log("La musique devrait s'arr�ter" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
+            //Debug.Log("La musique devrait s'arr�ter" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
         }
         Destroy(gameObject);
     }
