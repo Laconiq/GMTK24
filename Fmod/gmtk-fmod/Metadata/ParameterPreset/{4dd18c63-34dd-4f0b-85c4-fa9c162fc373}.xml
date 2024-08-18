@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4dd18c63-34dd-4f0b-85c4-fa9c162fc373}">
+		<property name="name">
+			<value>Fade-Out</value>
+		</property>
+		<relationship name="folder">
+			<destination>{343c7167-af23-4821-bdbf-88fcc0a7741f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{cc65734f-a1a7-4d8a-aad5-325d20f86c74}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{cc65734f-a1a7-4d8a-aad5-325d20f86c74}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<relationship name="automators">
+			<destination>{2a71d4f3-52c5-4503-b834-f019124eb75d}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{2a71d4f3-52c5-4503-b834-f019124eb75d}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>
