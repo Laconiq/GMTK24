@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicVolume(int index, float volume)
     {
-        musicCelestialEventInstances[index].setVolume(volume);
+       // musicCelestialEventInstances[index].setVolume(Mathf);
     }
 
     //Regarder la vidéo à 26:00 pour des sons se basant sur la distance/spatialisation

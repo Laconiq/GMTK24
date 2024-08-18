@@ -10,7 +10,7 @@ public class SolarSystem : MonoBehaviour
         if (!other.TryGetComponent(out Planet planet))
             return;
         
-        if (!planet.IsLaunched)
+        if (!planet.IsPlanetLaunched())
             return;
         AddPlanet(planet);
     }
@@ -27,12 +27,12 @@ public class SolarSystem : MonoBehaviour
         return _planets.Count;
     }
     
-    private int CountPlanetsByType(PlanetType type)
+    private int CountPlanetsByType(Planet type)
     {
         int count = 0;
         foreach (Planet planet in _planets)
         {
-            if (planet.GetPlanetType() == type)
+            if (planet == type)
                 count++;
         }
         return count;

@@ -7,6 +7,10 @@ public class Planet : Celestial
     private Rigidbody _rb;
     private float _sunMass;
     private bool _isLaunched;
+    public bool IsPlanetLaunched()
+    {
+        return _isLaunched;
+    }
     private bool _isHidden;
     private PlayerController _playerController;
     private CameraController _cameraController;
@@ -106,6 +110,7 @@ public class Planet : Celestial
 
         if (other.TryGetComponent(out Sun _) && _isLaunched)
         {
+
             VolumeModifier(indexAudioManager, 0);
             Die();
             return;
