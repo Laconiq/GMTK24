@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private UIManager _uiManager;
     private Planet _currentPlanet;
     private GameState _gameState;
+    private Tutorial _tutorial;
 
     public enum GameState
     {
@@ -53,13 +54,21 @@ public class GameManager : MonoBehaviour
         if (_uiManager is null)
             Debug.LogError("UIManager not found in scene");
         
+        _tutorial = FindObjectOfType<Tutorial>();
+        if (_tutorial is null)
+            Debug.LogError("Tutorial not found in scene");
+        
+        _tutorial?.StartTutorial();
+    }
+
+    public void StartGame()
+    {
         _uiManager?.Initialize();
         _playerController?.Initialize();
         _cameraController?.Initialize();
-    }
-
-    private void Start()
-    {
+        
+        Destroy(_tutorial.gameObject);
+        
         SetState(GameState.PlacingBall);
     }
 

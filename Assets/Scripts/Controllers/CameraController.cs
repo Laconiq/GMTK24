@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     private Transform _lookAtCameraTransform;
     private bool _isLookingAtPlanet;
     private Planet _planetLookingAt;
+    private bool _isInitialized;
     public bool IsLookingAtPlanet() { return _isLookingAtPlanet; }
     public Planet GetPlanetLookingAt() { return _planetLookingAt; }
 
@@ -32,6 +33,8 @@ public class CameraController : MonoBehaviour
         _controls.Camera.Enable();
 
         _defaultRotation = gameObject.transform.rotation;
+        
+        _isInitialized = true;
     }
 
     private void Move(Vector2 direction)
@@ -51,6 +54,8 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        if (!_isInitialized)
+            return;
         transform.position += new Vector3(_direction.x, 0, _direction.y) * (speed * Time.deltaTime);
         _lookAtCameraTransform.position = transform.position;
     }
