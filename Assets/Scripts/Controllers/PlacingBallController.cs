@@ -5,6 +5,7 @@ public class PlacingBallController : MonoBehaviour
 {
     [SerializeField] private GameObject defaultPlanetPrefab;
     private GameObject _planetInstance;
+    public GameObject GetPlanetInstance() { return _planetInstance; }
     private bool _isControllerActive;
     private GameObject _lastPlanetPrefab;
 

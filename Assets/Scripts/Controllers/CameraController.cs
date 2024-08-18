@@ -9,7 +9,9 @@ public class CameraController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera lookAtCamera;
     private Transform _lookAtCameraTransform;
     private bool _isLookingAtPlanet;
+    private Planet _planetLookingAt;
     public bool IsLookingAtPlanet() { return _isLookingAtPlanet; }
+    public Planet GetPlanetLookingAt() { return _planetLookingAt; }
 
     private Quaternion _defaultRotation;
     [SerializeField] private float speed;
@@ -65,12 +67,16 @@ public class CameraController : MonoBehaviour
             lookAtCamera.Priority = 9;
             _virtualCamera.Priority = 11;
 
+            _planetLookingAt = null;
+
             GameManager.Instance.GetCurrentPlanet().SetPlanetVisibility(true);
         }
         else
         {
             lookAtCamera.Priority = 11;
             _virtualCamera.Priority = 9;
+            
+            _planetLookingAt = target.GetComponent<Planet>();
 
             GameManager.Instance.GetCurrentPlanet().SetPlanetVisibility(false);
 

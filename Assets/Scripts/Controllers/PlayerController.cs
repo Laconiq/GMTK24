@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour
         {
             case GameManager.GameState.PlacingBall:
                 if (_gameManager.GetCurrentPlanet().IsPlanetHidden() &&
-                    !_gameManager.GetCameraController().IsLookingAtPlanet())
+                    !_gameManager.GetCameraController().IsLookingAtPlanet()
+                    && _nearestCelestial != null)
                 {
                     _cameraController.LookAt(_nearestCelestial);
                     _planetInfos.ShowPlanetInfos(true);
@@ -47,6 +48,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (_gameManager.GetCameraController().IsLookingAtPlanet())
                 {
+                    if (IsHoveringDestroyPlanetButton())
+                        return;
                     _planetInfos.ShowPlanetInfos(false);
                     _cameraController.LookAt(null);
                 }
@@ -61,7 +64,22 @@ public class PlayerController : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
-
+    
+    private bool IsHoveringDestroyPlanetButton()
+    {
+        var destroyPlanet = FindObjectOfType<DestroyPlanet>();
+        if (destroyPlanet == null || !destroyPlanet.IsHovering()) 
+            return false;
+        var planet = _cameraController.GetPlanetLookingAt();
+        _planetInfos.SetPlanet(null);
+        _planetInfos.ShowPlanetInfos(false);
+        _cameraController.LookAt(null);
+        _nearestCelestial = null;
+        planet.Die();
+        GameManager.Instance.GetPlacingBallController().GetPlanetInstance().GetComponent<Planet>().GrowPlanet(true);
+        return true;
+    }
+    
     private void ReleaseLeftClick()
     {
         switch (_gameManager.GetGameState())

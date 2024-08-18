@@ -28,7 +28,7 @@ public class Planet : Celestial
         _playerController = GameManager.Instance.GetPlayerController();
         _cameraController = GameManager.Instance.GetCameraController();
         _model = transform.GetChild(0).gameObject;
-        growFeedback.PlayFeedbacks();
+        GrowPlanet(true);
 
         _rngOrbitalInfluence = Random.Range(0f, 1f);
         _rngIsAfflicted = Random.Range(0, 2);
@@ -98,9 +98,7 @@ public class Planet : Celestial
             return;
 
         _isHidden = true;
-        if (growFeedback.IsPlaying)
-            growFeedback.StopFeedbacks();
-        shrinkFeedback.PlayFeedbacks();
+        GrowPlanet(false);
         _playerController.SetNearestCelestial(other.transform);
         FindObjectOfType<CustomCursor>().SetHoverCursor();
     }
@@ -113,9 +111,7 @@ public class Planet : Celestial
         _playerController.SetNearestCelestial(null);
         if (_cameraController.IsLookingAtPlanet()) 
             return;
-        if (shrinkFeedback.IsPlaying)
-            shrinkFeedback.StopFeedbacks();
-        growFeedback.PlayFeedbacks();
+        GrowPlanet(true);
         FindObjectOfType<CustomCursor>().SetDefaultCursor();
     }
 
@@ -124,9 +120,25 @@ public class Planet : Celestial
         _model.SetActive(b);
     }
 
-    private void Die()
+    public void Die()
     {
         Destroy(gameObject);
+    }
+
+    public void GrowPlanet(bool b)
+    {
+        if (!b)
+        {
+            if (growFeedback.IsPlaying)
+                growFeedback.StopFeedbacks();
+            shrinkFeedback.StopFeedbacks();
+        }
+        else
+        {
+            if (shrinkFeedback.IsPlaying)
+                shrinkFeedback.StopFeedbacks();
+            growFeedback.StopFeedbacks();
+        }
     }
     
     // Getter and setter
