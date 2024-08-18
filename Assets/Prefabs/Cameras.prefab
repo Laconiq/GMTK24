@@ -178,6 +178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAtCamera: {fileID: 2652935845251409275}
   speed: 5
+  minFOV: 45
+  maxFOV: 75
+  scrollSpeed: 1
 --- !u!1 &7242469069224016786
 GameObject:
   m_ObjectHideFlags: 0
