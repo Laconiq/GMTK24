@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public abstract class Celestial : MonoBehaviour
 {
@@ -35,4 +34,9 @@ public abstract class Celestial : MonoBehaviour
         return GetComponent<Rigidbody>().velocity.magnitude;
     }
     public virtual float GetTotalDistanceTraveled() { return _totalDistanceTraveled; }
+
+    public string GetPlanetDescription()
+    {
+        return celestialDescription;
+    }
 }

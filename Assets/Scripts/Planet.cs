@@ -171,7 +171,14 @@ public class Planet : Celestial
 
     private void VolumeModifier(int index, int volume)
     {
-        AudioManager.instance.SetMusicVolume(index, volume);
+        float duration = 2f;
+
+        if (volume <= 0)
+        {
+            AudioManager.instance.FadeOut(index, duration);
+        }
+        else AudioManager.instance.FadeIn(index, duration);
+        //AudioManager.instance.SetMusicVolume(index, volume);
     }
 
     public void GrowPlanet(bool b)
