@@ -533,6 +533,12 @@ PrefabInstance:
       propertyPath: celestialName
       value: Jouj
       objectReference: {fileID: 0}
+    - target: {fileID: 2362461107483833904, guid: 2e8d5b3e49e4746eebf502df918dc96f,
+        type: 3}
+      propertyPath: celestialDescription
+      value: The presence of dense coral reefs coupled with its shallow oceans bedded
+        with clay give it its iconic scarlet look.
+      objectReference: {fileID: 0}
     - target: {fileID: 3404555147463161120, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
       propertyPath: managedReferences[6233404502008659968].Timing.PlayCount

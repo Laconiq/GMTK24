@@ -518,6 +518,13 @@ PrefabInstance:
       propertyPath: celestialName
       value: Gob
       objectReference: {fileID: 0}
+    - target: {fileID: 2362461107483833904, guid: 2e8d5b3e49e4746eebf502df918dc96f,
+        type: 3}
+      propertyPath: celestialDescription
+      value: The strong greenhouse effect present of Gob has recently been causing
+        its very ductile formations to melt in the open air, solidifying back only
+        once they stop facing Alala.
+      objectReference: {fileID: 0}
     - target: {fileID: 4722838821857978919, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
       propertyPath: m_Name
