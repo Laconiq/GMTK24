@@ -11,9 +11,9 @@ public class Planet : Celestial
     private PlayerController _playerController;
     private CameraController _cameraController;
     private GameObject _model;
-    private bool planetIsInSunRange = false;
-    private float rngOrbitalInfluence;
-    private int rngIsAfflicted;
+    private bool _planetIsInSunRange;
+    private float _rngOrbitalInfluence;
+    private int _rngIsAfflicted;
 
     [Header("Feedbacks")]
     [SerializeField] private MMF_Player growFeedback;
@@ -30,9 +30,8 @@ public class Planet : Celestial
         _model = transform.GetChild(0).gameObject;
         growFeedback.PlayFeedbacks();
 
-        rngOrbitalInfluence = Random.Range(0f, 1f);
-        rngIsAfflicted = Random.Range(0, 2);
-        Debug.Log(rngIsAfflicted + "rng");
+        _rngOrbitalInfluence = Random.Range(0f, 1f);
+        _rngIsAfflicted = Random.Range(0, 2);
     }
 
     public void SetVelocity(Vector3 velocity)
@@ -63,25 +62,23 @@ public class Planet : Celestial
         var force = forceDirection * (_sun.gravitationalConstant * (_sunMass * _rb.mass / distanceToSun));
 
         #region Orbital Correction
-        if (rngIsAfflicted==1)
+        if (_rngIsAfflicted==1)
         {
             var idealOrbitalVelocity = Mathf.Sqrt(_sun.gravitationalConstant * _sunMass / Mathf.Sqrt(distanceToSun));
 
             var currentVelocity = _rb.velocity;
             Vector3 orbitalVelocityDirection;
             if (Vector3.Dot(Vector3.Cross(directionToSun, Vector3.up), currentVelocity) > 0)
-            {
                 orbitalVelocityDirection = Vector3.Cross(directionToSun, Vector3.up).normalized;
-            }
-            else orbitalVelocityDirection = Vector3.Cross(Vector3.up, directionToSun).normalized;
+            else 
+                orbitalVelocityDirection = Vector3.Cross(Vector3.up, directionToSun).normalized;
 
             var currentSpeed = Vector3.Dot(currentVelocity, orbitalVelocityDirection);
             float speedCorrection;
             if (currentSpeed > idealOrbitalVelocity + _sun.orbitalVelocityThreshold || currentSpeed < idealOrbitalVelocity - _sun.orbitalVelocityThreshold)
-            {
-                speedCorrection = (idealOrbitalVelocity - currentSpeed) * rngOrbitalInfluence * Time.fixedDeltaTime;
-            }
-            else speedCorrection = (idealOrbitalVelocity - currentSpeed) * Time.fixedDeltaTime;
+                speedCorrection = (idealOrbitalVelocity - currentSpeed) * _rngOrbitalInfluence * Time.fixedDeltaTime;
+            else 
+                speedCorrection = (idealOrbitalVelocity - currentSpeed) * Time.fixedDeltaTime;
             _rb.velocity += orbitalVelocityDirection * speedCorrection;
         }
         #endregion
