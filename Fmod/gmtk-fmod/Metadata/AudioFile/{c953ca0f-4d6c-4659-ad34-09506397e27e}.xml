@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c953ca0f-4d6c-4659-ad34-09506397e27e}">
+		<property name="assetPath">
+			<value>sfx-gmtk-planet-system-1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{93cb33ae-e6ae-4046-8fa0-573334d345d3}</destination>
+		</relationship>
+	</object>
+</objects>
