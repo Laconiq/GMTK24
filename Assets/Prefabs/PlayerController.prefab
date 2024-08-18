@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a96a4901de04bc48ca4432e51f84fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceModifier: 10
+  forceModifier: 0.05
+  maxForce: 30
+  minForce: 2
   shootPreview: {fileID: 0}
 --- !u!1 &7271624565402159171
 GameObject:

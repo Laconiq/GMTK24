@@ -15,13 +15,13 @@ public class CueController : MonoBehaviour
     public float GetMaxForce() { return maxForce; }
     
     [SerializeField] private float minForce;
-    [SerializeField] private ShootPreview shootPreview;
+    private ShootPreview _shootPreview;
 
     public void EnableControls()
     {
-        shootPreview = FindObjectOfType<ShootPreview>();
+        _shootPreview = FindObjectOfType<ShootPreview>();
 
-        if (shootPreview is null)
+        if (_shootPreview is null)
             Debug.LogError("ShootPreview is not assigned in the inspector");
 
         _isControllerActive = true;
@@ -43,7 +43,7 @@ public class CueController : MonoBehaviour
     private void StartCharging()
     {
         _initialMousePosition = Mouse.current.position.ReadValue();
-        shootPreview.EnableLine();
+        _shootPreview.EnableLine();
     }
 
     private void ChargeShot()
@@ -60,7 +60,7 @@ public class CueController : MonoBehaviour
         _forceVector = _forceVector.normalized * clampedMagnitude;
 
         var endPosition = GameManager.Instance.GetCurrentPlanet().transform.position + _forceVector;
-        shootPreview.DrawLine(endPosition);
+        _shootPreview.DrawLine(endPosition);
     }
 
     public void ApplyForce()
@@ -72,7 +72,7 @@ public class CueController : MonoBehaviour
             return;
         var planetScript = ballInstance.GetComponent<Planet>();
         planetScript?.SetVelocity(_forceVector);
-        shootPreview.DisableLine();
+        _shootPreview.DisableLine();
         GameManager.Instance.SetState(GameManager.GameState.Shooting);
     }
 }
