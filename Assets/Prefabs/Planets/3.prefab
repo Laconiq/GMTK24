@@ -540,6 +540,11 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7773285922120345750, guid: 2e8d5b3e49e4746eebf502df918dc96f,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: -35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
