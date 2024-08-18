@@ -1123,6 +1123,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 6042887759194778777, guid: 6bf847768565ab24295efbdcc382f3fa,
+        type: 3}
+      propertyPath: m_Antialiasing
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042887759194778777, guid: 6bf847768565ab24295efbdcc382f3fa,
+        type: 3}
+      propertyPath: m_TaaSettings.m_ContrastAdaptiveSharpening
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6488373755267619813, guid: 6bf847768565ab24295efbdcc382f3fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1209,6 +1219,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 5132002679600571335, guid: 0d56b171976ef4410a1f286d91a050ad,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132002679600571335, guid: 0d56b171976ef4410a1f286d91a050ad,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5439991437999334200, guid: 0d56b171976ef4410a1f286d91a050ad,
         type: 3}
       propertyPath: m_Pivot.x
