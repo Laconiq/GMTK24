@@ -57,6 +57,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a44ca2cd9596544482d6a7e0cb09b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ZoomIn>k__BackingField:
+    Guid:
+      Data1: 1614940644
+      Data2: 1157949300
+      Data3: 929825208
+      Data4: 750227943
+    Path: event:/sfx-gmtk-zoom-in
+  <ZoomOut>k__BackingField:
+    Guid:
+      Data1: 345779169
+      Data2: 1093733286
+      Data3: -14511994
+      Data4: -903350811
+    Path: event:/sfx-gmtk-zoom-out
+  <OpenRadialMenu>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <music>k__BackingField:
     Guid:
       Data1: -1238375618
@@ -64,4 +85,85 @@ MonoBehaviour:
       Data3: 90920374
       Data4: -588138364
     Path: event:/mus-gmtk-sun
-  <musicalCelestialList>k__BackingField: []
+  <musicalCelestialList>k__BackingField:
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: -783524417
+        Data2: 1093472366
+        Data3: -201688897
+        Data4: 775833531
+      Path: event:/mus-gmtk-planet-1
+    <celestialObject>k__BackingField: {fileID: 2275789016266515406, guid: 3e8a33de005824ddb8a24ad0073688be,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: 61678493
+        Data2: 1234341806
+        Data3: -1231641704
+        Data4: -274207806
+      Path: event:/mus-gmtk-planet-2
+    <celestialObject>k__BackingField: {fileID: 851692459467321315, guid: c66598e07c4ec4a909d812a4ead39ae4,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: 735860632
+        Data2: 1325542459
+        Data3: -506236526
+        Data4: -1298979927
+      Path: event:/mus-gmtk-planet-3
+    <celestialObject>k__BackingField: {fileID: 2953139351760425952, guid: b6931f018c6b94a6ba8c902b75c5cf09,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: -896004846
+        Data2: 1096946420
+        Data3: -796926282
+        Data4: 1879332104
+      Path: event:/mus-gmtk-planet-4
+    <celestialObject>k__BackingField: {fileID: 7693230132092088200, guid: beb9c58515655484593fd5fc2d32410a,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: -756057620
+        Data2: 1328610292
+        Data3: -663381334
+        Data4: 1072951511
+      Path: event:/mus-gmtk-planet-5
+    <celestialObject>k__BackingField: {fileID: 851692459467321315, guid: c65d11bd0261a432ea34732347885962,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: -1031512301
+        Data2: 1271138530
+        Data3: 576182941
+        Data4: 1687747631
+      Path: event:/mus-gmtk-planet-6
+    <celestialObject>k__BackingField: {fileID: 5905846224895931817, guid: be0a5632162b845eeab821fec0f497e6,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: -40078629
+        Data2: 1340018967
+        Data3: 64986779
+        Data4: -990659606
+      Path: event:/mus-gmtk-planet-7
+    <celestialObject>k__BackingField: {fileID: 6690239885124826900, guid: bde45237b8d3c43749cdc7df2e02a6d6,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: -236207809
+        Data2: 1136590913
+        Data3: -854229343
+        Data4: -1244182147
+      Path: event:/mus-gmtk-planet-8
+    <celestialObject>k__BackingField: {fileID: 2072986320157938118, guid: 0af71c7db1ed1459b94fb725380293d5,
+      type: 3}
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: 1006527103
+        Data2: 1327985768
+        Data3: 1104061092
+        Data4: -367418986
+      Path: event:/mus-gmtk-planet-9
+    <celestialObject>k__BackingField: {fileID: 6088336271799487833, guid: 5aba02e0084df40768670a1e1b453316,
+      type: 3}

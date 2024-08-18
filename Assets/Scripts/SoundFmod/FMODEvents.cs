@@ -17,9 +17,17 @@ public class FMODEvents : MonoBehaviour
         [field: SerializeField] public Planet celestialObject { get; private set; }
     }
 
+    [field: Header("ZoomIn")]
+    [field: SerializeField] public EventReference ZoomIn { get; private set; }
+
+    [field: Header("ZoomOut")]
+    [field: SerializeField] public EventReference ZoomOut { get; private set; }
+
+    [field: Header("OpenRadialMenu")]
+    [field: SerializeField] public EventReference OpenRadialMenu { get; private set; }
+
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
-
 
     [field: Header("List Objet Music")]
     [field: SerializeField] public MusicalCelestialObject[] musicalCelestialList { get; private set; }

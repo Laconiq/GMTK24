@@ -93,7 +93,7 @@ public class Planet : Celestial
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sun"))
+        if (other.CompareTag("Sun") && _isLaunched)
         {
             for (int i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
             {
@@ -123,15 +123,15 @@ public class Planet : Celestial
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.CompareTag("Sun"))
+        if (other.CompareTag("Sun") && _isLaunched)
         {
             for (int i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
             {
                 if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
                 {
+                    //Debug.Log("Count" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
                     if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
                     {
-                        Debug.Log("La musique devrait s'arr�ter" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
                         VolumeModifier(i, 0);
                     }
                 }
@@ -158,8 +158,7 @@ public class Planet : Celestial
         solarSystem.RemovePlanet(this);
         if (solarSystem.CountPlanetsByType(this) <= 0)
         {
-            VolumeModifier(_indexAudioManager, 0);
-            //Debug.Log("La musique devrait s'arr�ter" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
+            VolumeModifier(indexAudioManager, 0);
         }
         Destroy(gameObject);
     }
