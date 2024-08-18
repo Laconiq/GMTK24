@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenRadialMenu(bool b)
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.OpenRadialMenu);
         radialMenu.gameObject.SetActive(b);
     }
 }

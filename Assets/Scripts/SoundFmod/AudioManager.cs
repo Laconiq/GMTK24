@@ -35,6 +35,12 @@ public class AudioManager : MonoBehaviour
 
         //AudioManager.instance.PlayOneShot(FMODEvents.instance._name, transform.position);
     }
+    public void PlayOneShot(EventReference sound)
+    {
+        RuntimeManager.PlayOneShot(sound);
+
+        //AudioManager.instance.PlayOneShot(FMODEvents.instance._name, transform.position);
+    }
 
     public EventInstance CreateEventInstance(EventReference eventReference)
     {
