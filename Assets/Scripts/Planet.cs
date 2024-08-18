@@ -125,9 +125,9 @@ public class Planet : Celestial
 
         if (other.CompareTag("Sun") && _isLaunched)
         {
-            for (int i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
+            for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
             {
-                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
+                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == GetPlanetName())
                 {
                     //Debug.Log("Count" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
                     if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
@@ -137,7 +137,7 @@ public class Planet : Celestial
                 }
             }
         }
-            if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden || _cameraController.IsLookingAtPlanet())
+        if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden || _cameraController.IsLookingAtPlanet())
             return;
         _isHidden = false;
         _playerController.SetNearestCelestial(null);
@@ -158,7 +158,7 @@ public class Planet : Celestial
         solarSystem.RemovePlanet(this);
         if (solarSystem.CountPlanetsByType(this) <= 0)
         {
-            VolumeModifier(indexAudioManager, 0);
+            VolumeModifier(_indexAudioManager, 0);
         }
         Destroy(gameObject);
     }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SolarSystem : MonoBehaviour
@@ -29,14 +30,7 @@ public class SolarSystem : MonoBehaviour
     
     public int CountPlanetsByType(Planet type)
     {
-        var count = 0;
-        foreach (var planet in _planets)
-        {
-            if (planet == type)
-                count++;
-        }
-        Debug.Log("Count of " + type.GetPlanetName() + " : " + count);
-        return count;
+        return _planets.Count(planet => planet == type);
     }
 
     private void AddPlanet(Planet planet)
@@ -44,7 +38,6 @@ public class SolarSystem : MonoBehaviour
         if (_planets.Contains(planet)) 
             return;
         _planets.Add(planet);
-        Debug.Log("Planet added: " + planet.GetPlanetName());
     }
     
     public void RemovePlanet(Planet planet)
@@ -52,6 +45,5 @@ public class SolarSystem : MonoBehaviour
         if (!_planets.Contains(planet)) 
             return;
         _planets.Remove(planet);
-        Debug.Log("Planet removed: " + planet.GetPlanetName());
     }
 }
