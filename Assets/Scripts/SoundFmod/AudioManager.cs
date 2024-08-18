@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (EventReference eventRef in musicEventReferences)
         {
-            musicEventInstances[eventRef.index] = eventRef.
+            //musicEventInstances[eventRef.index] = eventRef.
         }
     }
 
