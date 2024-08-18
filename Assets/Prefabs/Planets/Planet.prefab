@@ -432,6 +432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6d491edccc94483885d0c30fa35c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  celestialName: 
+  celestialDescription: 
   growFeedback: {fileID: 2103968528566938051}
   shrinkFeedback: {fileID: 1607433473177660853}
 --- !u!54 &2212868309109590808

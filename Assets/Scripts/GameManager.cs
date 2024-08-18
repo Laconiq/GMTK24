@@ -56,9 +56,13 @@ public class GameManager : MonoBehaviour
         _uiManager?.Initialize();
         _playerController?.Initialize();
         _cameraController?.Initialize();
+    }
+
+    private void Start()
+    {
         SetState(GameState.PlacingBall);
     }
-    
+
     public void SetState(GameState state)
     {
         _gameState = state;

@@ -290,6 +290,12 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &271813889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1862312985097422709, guid: 0d56b171976ef4410a1f286d91a050ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 6036681900834566838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8840191760949289057, guid: 6bf847768565ab24295efbdcc382f3fa,
@@ -588,6 +594,30 @@ MonoBehaviour:
     Name: 
     GameObject: {fileID: 1940520727}
     Ordinal: 21
+    Priority: 0
+    IconType: 320000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 271813889}
+    Ordinal: 22
+    Priority: 0
+    IconType: 320000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 1726466624}
+    Ordinal: 23
     Priority: 0
     IconType: 320000
     IconTexture: {fileID: 0}
@@ -1043,6 +1073,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934ba6814e34f1640a97c0759380aba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1726466624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7995417778533467738, guid: 0d56b171976ef4410a1f286d91a050ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 6036681900834566838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1803850368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1995148647642332285, guid: 0d56b171976ef4410a1f286d91a050ad,

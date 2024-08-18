@@ -9,9 +9,9 @@ public class PlacingBallController : MonoBehaviour
 
     public void EnableControls()
     {
-        _isControllerActive = true;
         _planetInstance = null;
         ChangePlanet(defaultPlanetPrefab);
+        _isControllerActive = true;
     }
 
     public void DisableControls()
@@ -37,6 +37,10 @@ public class PlacingBallController : MonoBehaviour
     {
         if (!_isControllerActive)
             return;
+        
+        if (_planetInstance is null)
+            return;
+        
         var mousePosition = Mouse.current.position.ReadValue();
         var ray = Camera.main!.ScreenPointToRay(mousePosition);
         if (!Physics.Raycast(ray, out var hit)) 

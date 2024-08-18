@@ -6,7 +6,7 @@ public class Planet : Celestial
     private Sun _sun;
     private Rigidbody _rb;
     private float _sunMass;
-    private bool _isInitialized;
+    private bool _isLaunched;
     private bool _isHidden;
     private PlayerController _playerController;
     private CameraController _cameraController;
@@ -16,9 +16,9 @@ public class Planet : Celestial
     [SerializeField] private MMF_Player growFeedback;
     [SerializeField] private MMF_Player shrinkFeedback;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         _rb = GetComponent<Rigidbody>();
         _sun = FindObjectOfType<Sun>();
         _rb.isKinematic = true;
@@ -35,7 +35,7 @@ public class Planet : Celestial
         
         _rb.velocity = velocity;
         _sunMass = _sun.GetComponent<Rigidbody>().mass;
-        _isInitialized = true;
+        _isLaunched = true;
     }
 
     protected override void FixedUpdate()
@@ -46,7 +46,7 @@ public class Planet : Celestial
 
     private void ApplyGravity()
     {
-        if (_sun is null || !_isInitialized)
+        if (_sun is null || !_isLaunched)
             return;
 
         var directionToSun = _sun.transform.position - transform.position;
@@ -60,8 +60,15 @@ public class Planet : Celestial
     
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Celestial") || _isInitialized || _isHidden) 
+        if (other.TryGetComponent(out Sun _) && _isLaunched)
+        {
+            Die();
             return;
+        }
+        
+        if (!other.CompareTag("Celestial") || _isLaunched || _isHidden) 
+            return;
+
         _isHidden = true;
         if (growFeedback.IsPlaying)
             growFeedback.StopFeedbacks();
@@ -71,7 +78,7 @@ public class Planet : Celestial
     
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Celestial") || _isInitialized || !_isHidden) 
+        if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden) 
             return;
         _isHidden = false;
         _playerController.SetNearestCelestial(null);
@@ -85,6 +92,11 @@ public class Planet : Celestial
     public void SetPlanetVisibility(bool b)
     {
         _model.SetActive(b);
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
     
     // Getter and setter

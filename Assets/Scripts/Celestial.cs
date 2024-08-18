@@ -10,7 +10,7 @@ public abstract class Celestial : MonoBehaviour
     private float _totalDistanceTraveled;
     private Vector3 _lastPosition;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         _lastPosition = transform.position;
     }
