@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlanetInfos : MonoBehaviour
 {
     [SerializeField] private TMP_Text planetName;
+    [SerializeField] private TMP_Text planetDescription;
     [SerializeField] private TMP_Text distanceTravelled;
     [SerializeField] private TMP_Text planetSpeed;
     [SerializeField] private GameObject planetInfos;
@@ -30,6 +31,7 @@ public class PlanetInfos : MonoBehaviour
         if (_currentCelestial is null)
             return;
         planetName.text = "Planet: " + celestial.GetPlanetName();
+        planetDescription.text = celestial.GetPlanetDescription();
         _destroyPlanetButton.SetActive(celestial is Planet);
         UpdatePlanetInfos();
     }
