@@ -30,7 +30,7 @@ public class PlanetInfos : MonoBehaviour
         _currentCelestial = celestial;
         if (_currentCelestial is null)
             return;
-        planetName.text = "Planet: " + celestial.GetPlanetName();
+        planetName.text = celestial.GetPlanetName();
         planetDescription.text = celestial.GetPlanetDescription();
         _destroyPlanetButton.SetActive(celestial is Planet);
         UpdatePlanetInfos();
