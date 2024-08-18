@@ -1,0 +1,1317 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9107464368584821681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-selection-open
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-selection-open
+  Guid:
+    Data1: -42740994
+    Data2: 1101407657
+    Data3: 310992522
+    Data4: -1011352269
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1125
+--- !u!114 &-8246281989899169551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-2
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-2
+  Guid:
+    Data1: 1528172841
+    Data2: 1196367545
+    Data3: -593032058
+    Data4: 1813888047
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &-8111938916184950911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-1
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-1
+  Guid:
+    Data1: 1280621782
+    Data2: 1170022150
+    Data3: -734995539
+    Data4: -1776364806
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &-8109660383404603904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-3/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7951348669837294757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-zoom-in
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-zoom-in
+  Guid:
+    Data1: 1614940644
+    Data2: 1157949300
+    Data3: 929825208
+    Data4: 750227943
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &-7256805041258785773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-3
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-3
+  Guid:
+    Data1: 735860632
+    Data2: 1325542459
+    Data3: -506236526
+    Data4: -1298979927
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8109660383404603904}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &-7229256948282135573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-3
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-3
+  Guid:
+    Data1: -1392514463
+    Data2: 1338908653
+    Data3: -1566191453
+    Data4: -185044828
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &-7170686410762611126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-5
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-5
+  Guid:
+    Data1: -756057620
+    Data2: 1328610292
+    Data3: -663381334
+    Data4: 1072951511
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4494062419488488092}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &-6517976523667321379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/sfx.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/gmtk-fmod/Build/Desktop/sfx.bank
+  Name: sfx
+  StudioPath: bank:/sfx
+  lastModified: 638596028683201276
+  FileSizes:
+  - Name: Desktop
+    Value: 998144
+  - Name: HTML5
+    Value: 998144
+  Exists: 1
+--- !u!114 &-5761557704128003586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-sun
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-sun
+  Guid:
+    Data1: -1238375618
+    Data2: 1279950879
+    Data3: 90920374
+    Data4: -588138364
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &-5384988689094383608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-1
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-1
+  Guid:
+    Data1: -783524417
+    Data2: 1093472366
+    Data3: -201688897
+    Data4: 775833531
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8449203541589432666}
+  - {fileID: 6563599454808824013}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &-5334803730105573197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-zoom-out
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-zoom-out
+  Guid:
+    Data1: 345779169
+    Data2: 1093733286
+    Data3: -14511994
+    Data4: -903350811
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
+--- !u!114 &-4494062419488488092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-5/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3060374798077631558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-7
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-7
+  Guid:
+    Data1: -1082116906
+    Data2: 1332123766
+    Data3: -1688231747
+    Data4: 1794897608
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &-3027768791448854485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-3
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-3
+  Guid:
+    Data1: 373947692
+    Data2: 1235530552
+    Data3: -726902632
+    Data4: 1403373493
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &-1027288926980087711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-2/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1024923782624703293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-1
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-1
+  Guid:
+    Data1: -1454117663
+    Data2: 1317960685
+    Data3: -1405665616
+    Data4: 1123908920
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &-792860934070419313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-9
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-9
+  Guid:
+    Data1: 1217640071
+    Data2: 1186693092
+    Data3: 411858604
+    Data4: 569256741
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
+--- !u!114 &-107287914254066814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-8
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-8
+  Guid:
+    Data1: 2060177080
+    Data2: 1149975236
+    Data3: 1302014101
+    Data4: -1188076150
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 4800807486540340833}
+  - {fileID: 6009856303804657315}
+  - {fileID: 5035595988653442823}
+  - {fileID: -6517976523667321379}
+  EditorEvents:
+  - {fileID: 6016492864089081743}
+  - {fileID: 7941090321857339654}
+  - {fileID: -5761557704128003586}
+  - {fileID: 7156807851077538442}
+  - {fileID: 3197646597427499885}
+  - {fileID: -7256805041258785773}
+  - {fileID: 3653591424399960886}
+  - {fileID: -5384988689094383608}
+  - {fileID: 661499807508113867}
+  - {fileID: -7170686410762611126}
+  - {fileID: 7799660450489917153}
+  - {fileID: -8246281989899169551}
+  - {fileID: -3027768791448854485}
+  - {fileID: 7732066534868951591}
+  - {fileID: 9033833928979146091}
+  - {fileID: 4813353443681839733}
+  - {fileID: 4185989088069906096}
+  - {fileID: 5922731604097885900}
+  - {fileID: -7229256948282135573}
+  - {fileID: -792860934070419313}
+  - {fileID: 7344548740873809041}
+  - {fileID: 6837212753731030909}
+  - {fileID: -107287914254066814}
+  - {fileID: 7011461959918034350}
+  - {fileID: -3060374798077631558}
+  - {fileID: -8111938916184950911}
+  - {fileID: -5334803730105573197}
+  - {fileID: -1024923782624703293}
+  - {fileID: -7951348669837294757}
+  - {fileID: 5695893854586215646}
+  - {fileID: 3441251292667212454}
+  - {fileID: -9107464368584821681}
+  - {fileID: 1235828046197000407}
+  - {fileID: 2550681744153608523}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 6009856303804657315}
+  StringsBanks:
+  - {fileID: 4800807486540340833}
+  cacheTime: 638596028683201276
+  cacheVersion: 131619
+--- !u!114 &661499807508113867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-7
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-7
+  Guid:
+    Data1: -40078629
+    Data2: 1340018967
+    Data3: 64986779
+    Data4: -990659606
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3396943922839520378}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &1235828046197000407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-idle-planet-selection
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-idle-planet-selection
+  Guid:
+    Data1: 1124013495
+    Data2: 1267965695
+    Data3: -744015742
+    Data4: 763872345
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28421
+--- !u!114 &2550681744153608523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-shot
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-shot
+  Guid:
+    Data1: -684425780
+    Data2: 1305319270
+    Data3: 1296977312
+    Data4: -1177055948
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &2706881277633133942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-6/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3197646597427499885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-9
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-9
+  Guid:
+    Data1: 1006527103
+    Data2: 1327985768
+    Data3: 1104061092
+    Data4: -367418986
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7722298822273668778}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &3396943922839520378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-7/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3441251292667212454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-selection-close
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-selection-close
+  Guid:
+    Data1: -564123397
+    Data2: 1304866278
+    Data3: 154737296
+    Data4: 125805903
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
+--- !u!114 &3653591424399960886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-2
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-2
+  Guid:
+    Data1: 61678493
+    Data2: 1234341806
+    Data3: -1231641704
+    Data4: -274207806
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1027288926980087711}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &4106357065394045938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-8/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4185989088069906096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-2
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-2
+  Guid:
+    Data1: -1943556804
+    Data2: 1243104641
+    Data3: 778817962
+    Data4: 1642613905
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &4800807486540340833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/gmtk-fmod/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638596028682191846
+  FileSizes:
+  - Name: Desktop
+    Value: 2202
+  - Name: HTML5
+    Value: 2202
+  Exists: 1
+--- !u!114 &4813353443681839733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-7
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-7
+  Guid:
+    Data1: 1276820022
+    Data2: 1246480903
+    Data3: -713117266
+    Data4: 921047417
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
+--- !u!114 &5035595988653442823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/music.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/gmtk-fmod/Build/Desktop/music.bank
+  Name: music
+  StudioPath: bank:/music
+  lastModified: 638596028683111222
+  FileSizes:
+  - Name: Desktop
+    Value: 12696352
+  - Name: HTML5
+    Value: 12696224
+  Exists: 1
+--- !u!114 &5695893854586215646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-9
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-9
+  Guid:
+    Data1: -1386759188
+    Data2: 1082567938
+    Data3: -1181300036
+    Data4: 209974158
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &5922731604097885900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-6
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-6
+  Guid:
+    Data1: 60816205
+    Data2: 1231992331
+    Data3: 352755104
+    Data4: -1988812697
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &6009856303804657315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/gmtk-fmod/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638595976793289242
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  - Name: HTML5
+    Value: 1036
+  Exists: 1
+--- !u!114 &6016492864089081743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-4
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-4
+  Guid:
+    Data1: -896004846
+    Data2: 1096946420
+    Data3: -796926282
+    Data4: 1879332104
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6094120198621319000}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &6094120198621319000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-4/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6563599454808824013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-1/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6837212753731030909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-6
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-6
+  Guid:
+    Data1: -2121295438
+    Data2: 1238221664
+    Data3: 54563501
+    Data4: 750027737
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &7011461959918034350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-5
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-5
+  Guid:
+    Data1: -1328607028
+    Data2: 1134755861
+    Data3: 402472610
+    Data4: 1139754844
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &7156807851077538442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-8
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-8
+  Guid:
+    Data1: -236207809
+    Data2: 1136590913
+    Data3: -854229343
+    Data4: -1244182147
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4106357065394045938}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &7344548740873809041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-system-4
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-system-4
+  Guid:
+    Data1: 716562062
+    Data2: 1177141729
+    Data3: 862953095
+    Data4: 1783382205
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &7722298822273668778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-9/Fade-In
+  m_EditorClassIdentifier: 
+  Name: Fade-In
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3484148374
+    data2: 3741551789
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7732066534868951591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-8
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-8
+  Guid:
+    Data1: 330729263
+    Data2: 1262499280
+    Data3: 514862009
+    Data4: 591382258
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &7799660450489917153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-4
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-4
+  Guid:
+    Data1: 1533095436
+    Data2: 1229160182
+    Data3: -38153295
+    Data4: 646759891
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &7941090321857339654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/mus-gmtk-planet-6
+  m_EditorClassIdentifier: 
+  Path: event:/mus-gmtk-planet-6
+  Guid:
+    Data1: -1031512301
+    Data2: 1271138530
+    Data3: 576182941
+    Data4: 1687747631
+  Banks:
+  - {fileID: 5035595988653442823}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2706881277633133942}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 128000
+--- !u!114 &8449203541589432666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/mus-gmtk-planet-1/Fade-Out
+  m_EditorClassIdentifier: 
+  Name: Fade-Out
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 278370659
+    data2: 1915730054
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &9033833928979146091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx-gmtk-planet-select-5
+  m_EditorClassIdentifier: 
+  Path: event:/sfx-gmtk-planet-select-5
+  Guid:
+    Data1: 1261112626
+    Data2: 1208277526
+    Data3: -1590264419
+    Data4: 1136387768
+  Banks:
+  - {fileID: -6517976523667321379}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500

@@ -140,3 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultPlanetPrefab: {fileID: 7679218976506164212, guid: c66598e07c4ec4a909d812a4ead39ae4,
     type: 3}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 8

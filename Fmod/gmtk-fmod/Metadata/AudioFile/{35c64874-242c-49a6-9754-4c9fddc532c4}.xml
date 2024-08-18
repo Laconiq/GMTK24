@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{35c64874-242c-49a6-9754-4c9fddc532c4}">
+		<property name="assetPath">
+			<value>mus-gmtk-planet-8.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>128</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{93cb33ae-e6ae-4046-8fa0-573334d345d3}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -138,14 +138,14 @@ PrefabInstance:
     - target: {fileID: 1273935048629095029, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: "Description du jeu genre amuse toi \xE0 tirer des plan\xE8tes pour
-        cr\xE9er ton syst\xE8me solaire et une ambiance sonore associ\xE9 \xE0 chacune
-        d'entre elle"
+      value: "In this game, you\u2019ll have fun launching planets to create your
+        own solar system. Each planet comes with its unique soundscape, allowing
+        you to craft both your solar system and its musical ambiance."
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -290,13 +290,13 @@ PrefabInstance:
     - target: {fileID: 1273935048629095029, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: "Tu peux changer de plan\xE8te en maintenant clique droit et en passant
-        dessus"
+      value: <b>Hold the right mouse button</b> and hover over the icons to <b>switch
+        between different planets</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -446,13 +446,14 @@ PrefabInstance:
     - target: {fileID: 1273935048629095029, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: "Tu peux \xE9galement te d\xE9placer avec les fl\xE8ches et cliquer
-        sur une plan\xE8te en orbite pour avoir plus d'info, bon jeu"
+      value: Navigate through your universe using WASD/ZQSD or the arrow keys. You
+        can also get detailed information about any orbiting planet by clicking on
+        it.
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -602,13 +603,14 @@ PrefabInstance:
     - target: {fileID: 1273935048629095029, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: "Choisit ou poser ta plan\xE8te et maintient le click pour que la force
-        soit diff\xE9rentes."
+      value: Move your mouse to choose the launch position for your planet. <b>Click
+        and hold the left mouse button</b> to set the strength and direction, then
+        <b>release to send the planet</b> into orbit.
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}

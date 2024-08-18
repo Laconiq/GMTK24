@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
         _planetInfos.ShowPlanetInfos(false);
         _cameraController.LookAt(null);
         _nearestCelestial = null;
+        destroyPlanet.Hover(false);
         planet.Die();
         GameManager.Instance.GetPlacingBallController().GetPlanetInstance().GetComponent<Planet>().GrowPlanet(true);
         return true;
