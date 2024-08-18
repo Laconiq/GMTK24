@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     
     private CueController _cueController;
     private PlacingBallController _placingBallController;
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        if (instance is null)
+        if (Instance is null)
             Initialize();
         else
             Destroy(gameObject);
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
         
         _playerController = FindObjectOfType<PlayerController>();
@@ -56,14 +56,16 @@ public class GameManager : MonoBehaviour
         _uiManager?.Initialize();
         _playerController?.Initialize();
         _cameraController?.Initialize();
+    }
+
+    private void Start()
+    {
         SetState(GameState.PlacingBall);
     }
-    
+
     public void SetState(GameState state)
     {
         _gameState = state;
-        
-        Debug.Log("State changed to " + _gameState);
         
         switch (_gameState)
         {
@@ -79,7 +81,7 @@ public class GameManager : MonoBehaviour
                 _cueController.DisableControls();
                 _placingBallController.DisableControls();
                 SetCurrentPlanet(null);
-                Invoke(nameof(SetStatePlacingBall), 3f);
+                Invoke(nameof(SetStatePlacingBall), 2f);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

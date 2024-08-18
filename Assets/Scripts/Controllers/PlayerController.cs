@@ -13,15 +13,17 @@ public class PlayerController : MonoBehaviour
     private UIManager _uiManager;
     private Coroutine _checkUIElementUnderMouseCoroutine;
     private CameraController _cameraController;
+    private PlanetInfos _planetInfos;
 
     private Controls _controls;
 
     public void Initialize()
     {
-        _gameManager = GameManager.instance;
+        _gameManager = GameManager.Instance;
         _cueController = _gameManager.GetCueController();
         _uiManager = _gameManager.GetUIManager();
         _cameraController = _gameManager.GetCameraController();
+        _planetInfos = FindObjectOfType<PlanetInfos>();
 
         _controls = new Controls();
         _controls.Player.LeftClick.performed += _ => PressLeftClick();
@@ -36,12 +38,20 @@ public class PlayerController : MonoBehaviour
         switch (_gameManager.GetGameState())
         {
             case GameManager.GameState.PlacingBall:
-                if (_gameManager.GetCurrentPlanet().IsPlanetHidden() && !_gameManager.GetCameraController().IsLookingAtPlanet())
+                if (_gameManager.GetCurrentPlanet().IsPlanetHidden() &&
+                    !_gameManager.GetCameraController().IsLookingAtPlanet())
+                {
                     _cameraController.LookAt(_nearestCelestial);
+                    _planetInfos.ShowPlanetInfos(true);
+                    _planetInfos.SetPlanet(_nearestCelestial.GetComponent<Celestial>());
+                }
                 else if (_gameManager.GetCameraController().IsLookingAtPlanet())
+                {
+                    _planetInfos.ShowPlanetInfos(false);
                     _cameraController.LookAt(null);
+                }
                 else 
-                    GameManager.instance.SetState(GameManager.GameState.Charging);
+                    GameManager.Instance.SetState(GameManager.GameState.Charging);
                 break;
             case GameManager.GameState.Charging:
                 break;
@@ -92,6 +102,8 @@ public class PlayerController : MonoBehaviour
         switch (_gameManager.GetGameState())
         {
             case GameManager.GameState.PlacingBall:
+                if (_cameraController.IsLookingAtPlanet())
+                    return;
                 StopCoroutine(_checkUIElementUnderMouseCoroutine);
                 _uiManager.OpenRadialMenu(false);
                 break;

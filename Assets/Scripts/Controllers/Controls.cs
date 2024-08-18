@@ -83,6 +83,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ScrollWheel"",
+                    ""type"": ""Value"",
+                    ""id"": ""cb55745f-bb6d-425b-b5be-3471a92258b4"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -195,6 +204,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b31d931-b04d-44e9-81d9-04af181888ba"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollWheel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -208,6 +228,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Move = m_Camera.FindAction("Move", throwIfNotFound: true);
+        m_Camera_ScrollWheel = m_Camera.FindAction("ScrollWheel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -324,11 +345,13 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Camera;
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
     private readonly InputAction m_Camera_Move;
+    private readonly InputAction m_Camera_ScrollWheel;
     public struct CameraActions
     {
         private @Controls m_Wrapper;
         public CameraActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Camera_Move;
+        public InputAction @ScrollWheel => m_Wrapper.m_Camera_ScrollWheel;
         public InputActionMap Get() { return m_Wrapper.m_Camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -341,6 +364,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @ScrollWheel.started += instance.OnScrollWheel;
+            @ScrollWheel.performed += instance.OnScrollWheel;
+            @ScrollWheel.canceled += instance.OnScrollWheel;
         }
 
         private void UnregisterCallbacks(ICameraActions instance)
@@ -348,6 +374,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @ScrollWheel.started -= instance.OnScrollWheel;
+            @ScrollWheel.performed -= instance.OnScrollWheel;
+            @ScrollWheel.canceled -= instance.OnScrollWheel;
         }
 
         public void RemoveCallbacks(ICameraActions instance)
@@ -373,5 +402,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     public interface ICameraActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnScrollWheel(InputAction.CallbackContext context);
     }
 }

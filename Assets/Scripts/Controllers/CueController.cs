@@ -9,20 +9,25 @@ public class CueController : MonoBehaviour
     private Vector3 _forceVector;
     private Controls _controls;
     private bool _isControllerActive;
+
+    [SerializeField] private float maxForce;
     
+    public float GetMaxForce() { return maxForce; }
+    
+    [SerializeField] private float minForce;
     [SerializeField] private ShootPreview shootPreview;
-    
+
     public void EnableControls()
     {
         shootPreview = FindObjectOfType<ShootPreview>();
 
         if (shootPreview is null)
             Debug.LogError("ShootPreview is not assigned in the inspector");
-        
+
         _isControllerActive = true;
         StartCharging();
     }
-    
+
     public void DisableControls()
     {
         _isControllerActive = false;
@@ -50,7 +55,11 @@ public class CueController : MonoBehaviour
         _forceVector = direction.normalized * distance;
         _forceVector *= -forceModifier;
 
-        var endPosition = GameManager.instance.GetCurrentPlanet().transform.position + _forceVector;
+        // Clamp the force vector's magnitude between minForce and maxForce
+        var clampedMagnitude = Mathf.Clamp(_forceVector.magnitude, minForce, maxForce);
+        _forceVector = _forceVector.normalized * clampedMagnitude;
+
+        var endPosition = GameManager.Instance.GetCurrentPlanet().transform.position + _forceVector;
         shootPreview.DrawLine(endPosition);
     }
 
@@ -58,12 +67,12 @@ public class CueController : MonoBehaviour
     {
         if (!_isControllerActive)
             return;
-        var ballInstance = GameManager.instance.GetCurrentPlanet()?.gameObject;
-        if (ballInstance is null) 
+        var ballInstance = GameManager.Instance.GetCurrentPlanet()?.gameObject;
+        if (ballInstance is null)
             return;
         var planetScript = ballInstance.GetComponent<Planet>();
         planetScript?.SetVelocity(_forceVector);
         shootPreview.DisableLine();
-        GameManager.instance.SetState(GameManager.GameState.Shooting);
+        GameManager.Instance.SetState(GameManager.GameState.Shooting);
     }
 }

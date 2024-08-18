@@ -9,9 +9,9 @@ public class PlacingBallController : MonoBehaviour
 
     public void EnableControls()
     {
-        _isControllerActive = true;
         _planetInstance = null;
         ChangePlanet(defaultPlanetPrefab);
+        _isControllerActive = true;
     }
 
     public void DisableControls()
@@ -30,13 +30,18 @@ public class PlacingBallController : MonoBehaviour
         if (_planetInstance != null)
             Destroy(_planetInstance);
         _planetInstance = Instantiate(planetPrefab, Vector3.zero, Quaternion.identity);
-        GameManager.instance.SetCurrentPlanet(_planetInstance.GetComponent<Planet>());
+        GameManager.Instance.SetCurrentPlanet(_planetInstance.GetComponent<Planet>());
+        FollowMouse();
     }
 
     private void FollowMouse()
     {
         if (!_isControllerActive)
             return;
+        
+        if (_planetInstance is null)
+            return;
+        
         var mousePosition = Mouse.current.position.ReadValue();
         var ray = Camera.main!.ScreenPointToRay(mousePosition);
         if (!Physics.Raycast(ray, out var hit)) 
