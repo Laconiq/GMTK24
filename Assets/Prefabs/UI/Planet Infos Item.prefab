@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Planet : Planet Name'
+  m_text: Planet Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68d7d8755de5c064ba5e65bf565ac448, type: 2}
   m_sharedMaterial: {fileID: 4331091666110048373, guid: 68d7d8755de5c064ba5e65bf565ac448,
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.1
+  m_fontSize: 54.5
   m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 1

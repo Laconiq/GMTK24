@@ -681,7 +681,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Destroy this planet
+  m_text: Remove
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e77b910d8f7b43c4d90522278c21b51a, type: 2}
   m_sharedMaterial: {fileID: 2047676621337769831, guid: e77b910d8f7b43c4d90522278c21b51a,
@@ -2032,7 +2032,7 @@ PrefabInstance:
     - target: {fileID: 1613222061822035333, guid: 86462e0b50e78144f86c3dd626dd2325,
         type: 3}
       propertyPath: m_text
-      value: 'Planet: Planet Name'
+      value: Planet Name
       objectReference: {fileID: 0}
     - target: {fileID: 1613222061822035333, guid: 86462e0b50e78144f86c3dd626dd2325,
         type: 3}

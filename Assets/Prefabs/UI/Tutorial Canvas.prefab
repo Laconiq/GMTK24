@@ -143,9 +143,9 @@ PrefabInstance:
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: "In this game, you\u2019ll have fun launching planets to create your
-        own solar system. Each planet comes with its unique soundscape, allowing
-        you to craft both your solar system and its musical ambiance."
+      value: Enjoy launching a variety of planets to create your very own solar system.
+        Each planet comes with a unique soundscape, allowing you to create your own
+        musical ambiance.
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -156,6 +156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520856518229250409, guid: 9aa419a38feca7f43b5663d8949d70bb,
+        type: 3}
+      propertyPath: m_text
+      value: Welcome to Planetherium
       objectReference: {fileID: 0}
     - target: {fileID: 3681536410122085170, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -296,7 +301,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: <b>Hold the right mouse button</b> and hover over the icons to <b>switch
-        between different planets</b>.
+        between the different planets</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -311,7 +316,7 @@ PrefabInstance:
     - target: {fileID: 3520856518229250409, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: How to change planet ?
+      value: Changing Planets
       objectReference: {fileID: 0}
     - target: {fileID: 3681536410122085170, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -468,7 +473,7 @@ PrefabInstance:
     - target: {fileID: 3520856518229250409, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: How to move ?
+      value: Navigating
       objectReference: {fileID: 0}
     - target: {fileID: 3681536410122085170, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -608,9 +613,9 @@ PrefabInstance:
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: Move your mouse to choose the launch position for your planet. <b>Click
+      value: Use your mouse to choose the launch position for your planet. <b>Click
         and hold the left mouse button</b> to set the strength and direction, then
-        <b>release to send the planet</b> into orbit.
+        <b>release it to send the planet</b> into orbit.
       objectReference: {fileID: 0}
     - target: {fileID: 2163824187243297025, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
@@ -625,7 +630,7 @@ PrefabInstance:
     - target: {fileID: 3520856518229250409, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
       propertyPath: m_text
-      value: How to play ?
+      value: Launching Planets
       objectReference: {fileID: 0}
     - target: {fileID: 3681536410122085170, guid: 9aa419a38feca7f43b5663d8949d70bb,
         type: 3}
