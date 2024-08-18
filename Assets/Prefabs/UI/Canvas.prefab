@@ -380,7 +380,7 @@ Canvas:
   m_GameObject: {fileID: 5908067987034641388}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -632,12 +632,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -723,7 +723,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Bubo | Button
+      value: Choose 2 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -739,7 +739,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 7679218976506164212, guid: c65d11bd0261a432ea34732347885962,
+      objectReference: {fileID: 7679218976506164212, guid: c66598e07c4ec4a909d812a4ead39ae4,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -803,12 +803,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -894,7 +894,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Crater | Button
+      value: Choose 3 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -910,7 +910,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 3510000550307162558, guid: be0a5632162b845eeab821fec0f497e6,
+      objectReference: {fileID: 5312111924695224311, guid: b6931f018c6b94a6ba8c902b75c5cf09,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -974,12 +974,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1065,7 +1065,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Small Continents | Button
+      value: Choose 5 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1081,7 +1081,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 5312111924695224311, guid: b6931f018c6b94a6ba8c902b75c5cf09,
+      objectReference: {fileID: 7679218976506164212, guid: c65d11bd0261a432ea34732347885962,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1145,12 +1145,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1231,12 +1231,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 20d199b62f6a3f846ac0a276af091478,
+      objectReference: {fileID: 21300000, guid: 5c6d4c5e4c34a3043a99f553f2121327,
         type: 3}
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Base | Button
+      value: Choose 8 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1252,7 +1252,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 3836465082284839246, guid: 5aba02e0084df40768670a1e1b453316,
+      objectReference: {fileID: 9045333812790758865, guid: 0af71c7db1ed1459b94fb725380293d5,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1316,12 +1316,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1407,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Cirrus | Button
+      value: Choose 6 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1423,7 +1423,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 828690050783196063, guid: beb9c58515655484593fd5fc2d32410a,
+      objectReference: {fileID: 3510000550307162558, guid: be0a5632162b845eeab821fec0f497e6,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1487,12 +1487,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1573,12 +1573,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 20d199b62f6a3f846ac0a276af091478,
+      objectReference: {fileID: 21300000, guid: 66ddee5b3e3162349b2b2be1cf4d8bd3,
         type: 3}
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Ring2 | Button
+      value: Choose 9 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1594,7 +1594,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 9045333812790758865, guid: 0af71c7db1ed1459b94fb725380293d5,
+      objectReference: {fileID: 3836465082284839246, guid: 5aba02e0084df40768670a1e1b453316,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1658,12 +1658,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1749,7 +1749,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Ring | Button
+      value: Choose 4 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1765,7 +1765,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 4439212793928411907, guid: bde45237b8d3c43749cdc7df2e02a6d6,
+      objectReference: {fileID: 828690050783196063, guid: beb9c58515655484593fd5fc2d32410a,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1829,12 +1829,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1920,7 +1920,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Big Continents | Button
+      value: Choose 1 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -1936,7 +1936,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 7679218976506164212, guid: c66598e07c4ec4a909d812a4ead39ae4,
+      objectReference: {fileID: 9139768694505095129, guid: 3e8a33de005824ddb8a24ad0073688be,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2000,12 +2000,12 @@ PrefabInstance:
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1015957140573665145, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -2091,7 +2091,7 @@ PrefabInstance:
     - target: {fileID: 3140939206663252046, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
       propertyPath: m_Name
-      value: Choose Stratus | Button
+      value: Choose 7 | Button
       objectReference: {fileID: 0}
     - target: {fileID: 5431467353827155397, guid: f6572200d25aa4781b83c1245ac8a1e6,
         type: 3}
@@ -2107,7 +2107,7 @@ PrefabInstance:
         type: 3}
       propertyPath: planetPrefab
       value: 
-      objectReference: {fileID: 9139768694505095129, guid: 3e8a33de005824ddb8a24ad0073688be,
+      objectReference: {fileID: 4439212793928411907, guid: bde45237b8d3c43749cdc7df2e02a6d6,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

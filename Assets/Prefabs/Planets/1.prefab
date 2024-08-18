@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2809992478866908060
+--- !u!1 &831143261364200018
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,92 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7580678309704612101}
-  - component: {fileID: 8077409066360277091}
-  - component: {fileID: 1116778866199208717}
-  m_Layer: 0
-  m_Name: Planet_Acc_S_Continents
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7580678309704612101
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2809992478866908060}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7331435336160433879}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8077409066360277091
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2809992478866908060}
-  m_Mesh: {fileID: 3668323509476809373, guid: 1a58330c865c76c48b3b6046ada43484, type: 3}
---- !u!23 &1116778866199208717
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2809992478866908060}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -876546973899608171, guid: 1a58330c865c76c48b3b6046ada43484, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &7309751396506028485
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1192620917884144745}
-  - component: {fileID: 2058609170838237716}
-  - component: {fileID: 4578567236625504568}
+  - component: {fileID: 54888479882148072}
+  - component: {fileID: 3993808163654465357}
+  - component: {fileID: 1191250568899527559}
   m_Layer: 0
   m_Name: Planet_Round
   m_TagString: Untagged
@@ -101,36 +18,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1192620917884144745
+--- !u!4 &54888479882148072
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309751396506028485}
+  m_GameObject: {fileID: 831143261364200018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.25487268, y: 0.2824001, z: -1.4270936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7331435336160433879}
+  m_Father: {fileID: 4140041499750186661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2058609170838237716
+--- !u!33 &3993808163654465357
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309751396506028485}
+  m_GameObject: {fileID: 831143261364200018}
   m_Mesh: {fileID: 3618035608931295057, guid: 4a3dd7c7fa8059e46a0c866898a3b58a, type: 3}
---- !u!23 &4578567236625504568
+--- !u!23 &1191250568899527559
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309751396506028485}
+  m_GameObject: {fileID: 831143261364200018}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -166,7 +83,123 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &590689825726113232
+--- !u!1 &3232098752822985570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2851174510219958744}
+  - component: {fileID: 1170570354762978941}
+  - component: {fileID: 4024604811894776503}
+  m_Layer: 0
+  m_Name: Planet_Acc_Stratus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2851174510219958744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232098752822985570}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.25487268, y: 0.2824001, z: -1.4270936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4140041499750186661}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1170570354762978941
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232098752822985570}
+  m_Mesh: {fileID: -1071289895711534193, guid: 80b060d62dfe3a74b9d616599158cdc9, type: 3}
+--- !u!23 &4024604811894776503
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3232098752822985570}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -876546973899608171, guid: 80b060d62dfe3a74b9d616599158cdc9, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4914903543800130702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4140041499750186661}
+  m_Layer: 0
+  m_Name: Planet_Stratus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4140041499750186661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4914903543800130702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 54888479882148072}
+  - {fileID: 2851174510219958744}
+  m_Father: {fileID: 5967532346758637305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4565559105719293438
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -226,18 +259,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2362461107483833904, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
-      propertyPath: planetName
-      value: Small Continents
+      propertyPath: celestialName
+      value: Cairn
       objectReference: {fileID: 0}
     - target: {fileID: 4722838821857978919, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
       propertyPath: m_Name
-      value: Small Continents
-      objectReference: {fileID: 0}
-    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
-        type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -245,16 +273,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7893949076356559623, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1192620917884144745}
-    - targetCorrespondingSourceObject: {fileID: 7893949076356559623, guid: 2e8d5b3e49e4746eebf502df918dc96f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7580678309704612101}
+      addedObject: {fileID: 4140041499750186661}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e8d5b3e49e4746eebf502df918dc96f, type: 3}
---- !u!4 &7331435336160433879 stripped
+--- !u!4 &5967532346758637305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7893949076356559623, guid: 2e8d5b3e49e4746eebf502df918dc96f,
     type: 3}
-  m_PrefabInstance: {fileID: 590689825726113232}
+  m_PrefabInstance: {fileID: 4565559105719293438}
   m_PrefabAsset: {fileID: 0}

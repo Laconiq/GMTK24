@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da8dd0d9edfb47a3a6930380f5de960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  celestialName: Alala
+  celestialDescription: 
   gravitationalConstant: 0.1
 --- !u!135 &7135021252484716916
 SphereCollider:
