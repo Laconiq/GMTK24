@@ -15,6 +15,8 @@ public class Planet : Celestial
     private float rngOrbitalInfluence;
     private int rngIsAfflicted;
 
+    private int indexAudioManager = 0;
+
     [Header("Feedbacks")]
     [SerializeField] private MMF_Player growFeedback;
     [SerializeField] private MMF_Player shrinkFeedback;
@@ -32,7 +34,6 @@ public class Planet : Celestial
 
         rngOrbitalInfluence = Random.Range(0f, 1f);
         rngIsAfflicted = Random.Range(0, 2);
-        Debug.Log(rngIsAfflicted + "rng");
     }
 
     public void SetVelocity(Vector3 velocity)
@@ -88,15 +89,28 @@ public class Planet : Celestial
 
         _rb.AddForce(force);
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Sun"))
+        {
+            for (int i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
+            {
+                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
+                {
+                    VolumeModifier(i,1);
+                    indexAudioManager = i;
+                }
+            }
+        }
+
         if (other.TryGetComponent(out Sun _) && _isLaunched)
         {
+            VolumeModifier(indexAudioManager, 0);
             Die();
             return;
         }
-        
+
         if (!other.CompareTag("Celestial") || _isLaunched || _isHidden || _cameraController.IsLookingAtPlanet())
             return;
 
@@ -110,7 +124,18 @@ public class Planet : Celestial
     
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden || _cameraController.IsLookingAtPlanet())
+
+        if (other.CompareTag("Sun"))
+        {
+            for (int i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
+            {
+                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
+                {
+                    VolumeModifier(i, 0);
+                }
+            }
+        }
+            if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden || _cameraController.IsLookingAtPlanet())
             return;
         _isHidden = false;
         _playerController.SetNearestCelestial(null);
@@ -130,6 +155,11 @@ public class Planet : Celestial
     private void Die()
     {
         Destroy(gameObject);
+    }
+
+    private void VolumeModifier(int index, int volume)
+    {
+        AudioManager.instance.SetMusicVolume(index, volume);
     }
     
     // Getter and setter

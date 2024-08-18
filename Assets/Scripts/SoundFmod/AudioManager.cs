@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance musicEventInstance;
 
-    private EventInstance[] musicEventInstances;
+    private List<EventInstance> musicCelestialEventInstances;
 
     private void Awake()
     {
@@ -19,11 +19,14 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Found more than one Audio Manager in the scene");
         }
         instance = this;
+
+        musicCelestialEventInstances = new List<EventInstance>();
     }
 
     private void Start()
     {
         InitializeMusic(FMODEvents.instance.music);
+        InitializeMusic(FMODEvents.instance.musicalCelestialList);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
@@ -47,12 +50,19 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    private void InitializeMusic(EventReference[] musicEventReferences)
+    private void InitializeMusic(FMODEvents.MusicalCelestialObject[] musicEventReferences)
     {
-        foreach (EventReference eventRef in musicEventReferences)
+        for (int i = 0; i < musicEventReferences.Length; i++)
         {
-            //musicEventInstances[eventRef.index] = eventRef.
+            musicCelestialEventInstances.Add(CreateEventInstance(musicEventReferences[i].celestialMusic));
+            musicCelestialEventInstances[i].start();
+            musicCelestialEventInstances[i].setVolume(0);
         }
+    }
+
+    public void SetMusicVolume(int index, float volume)
+    {
+        musicCelestialEventInstances[index].setVolume(volume);
     }
 
     //Regarder la vidéo à 26:00 pour des sons se basant sur la distance/spatialisation
