@@ -522,13 +522,18 @@ PrefabInstance:
         type: 3}
       propertyPath: celestialDescription
       value: The strong greenhouse effect present of Gob has recently been causing
-        its very ductile formations to melt in the open air, solidifying back only
+        its ductile rock formations to melt in the open air, solidifying back only
         once they stop facing Alala.
       objectReference: {fileID: 0}
     - target: {fileID: 4722838821857978919, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
       propertyPath: m_Name
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
+        type: 3}
+      propertyPath: m_Time
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
@@ -539,6 +544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7773285922120345750, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
