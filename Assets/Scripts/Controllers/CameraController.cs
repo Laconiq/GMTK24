@@ -56,8 +56,16 @@ public class CameraController : MonoBehaviour
     {
         if (!_isInitialized)
             return;
-        transform.position += new Vector3(_direction.x, 0, _direction.y) * (speed * Time.deltaTime);
-        _lookAtCameraTransform.position = transform.position;
+
+        if (_isLookingAtPlanet)
+        {
+            _lookAtCameraTransform.position += new Vector3(_direction.x, 0, _direction.y) * (speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position += new Vector3(_direction.x, 0, _direction.y) * (speed * Time.deltaTime);
+            _lookAtCameraTransform.position = transform.position;
+        }
     }
 
     public void LookAt(Transform target)
