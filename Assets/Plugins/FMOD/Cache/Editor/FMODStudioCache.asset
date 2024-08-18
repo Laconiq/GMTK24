@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/sfx.bank
   Name: sfx
   StudioPath: bank:/sfx
-  lastModified: 638595851838496978
+  lastModified: 638595960486477939
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -161,7 +161,7 @@ MonoBehaviour:
   - {fileID: 6009856303804657315}
   StringsBanks:
   - {fileID: 4800807486540340833}
-  cacheTime: 638595851838496978
+  cacheTime: 638595960486477939
   cacheVersion: 131619
 --- !u!114 &661499807508113867
 MonoBehaviour:
@@ -259,7 +259,7 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638595851837363666
+  lastModified: 638595960485926280
   FileSizes:
   - Name: Desktop
     Value: 1174
@@ -279,7 +279,7 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 638595851838383672
+  lastModified: 638595960486437609
   FileSizes:
   - Name: Desktop
     Value: 12461888
@@ -299,7 +299,7 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638595851837363666
+  lastModified: 638595960485921304
   FileSizes:
   - Name: Desktop
     Value: 1036

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3290044727996287542}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -381.62134, y: -797.00934, z: -1190.538}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,3 +64,4 @@ MonoBehaviour:
       Data3: 90920374
       Data4: -588138364
     Path: event:/mus-gmtk-sun
+  <musicalCelestialList>k__BackingField: []

@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlacingBallController : MonoBehaviour
 {
     [SerializeField] private GameObject defaultPlanetPrefab;
+    [SerializeField] private LayerMask groundLayerMask;
     private GameObject _planetInstance;
     private bool _isControllerActive;
 
@@ -24,7 +25,7 @@ public class PlacingBallController : MonoBehaviour
     {
         FollowMouse();
     }
-    
+
     public void ChangePlanet(GameObject planetPrefab)
     {
         if (_planetInstance != null)
@@ -38,14 +39,16 @@ public class PlacingBallController : MonoBehaviour
     {
         if (!_isControllerActive)
             return;
-        
+
         if (_planetInstance is null)
             return;
-        
+
         var mousePosition = Mouse.current.position.ReadValue();
         var ray = Camera.main!.ScreenPointToRay(mousePosition);
-        if (!Physics.Raycast(ray, out var hit)) 
+
+        if (!Physics.Raycast(ray, out var hit, Mathf.Infinity, groundLayerMask))
             return;
+
         var worldPosition = hit.point;
         worldPosition.y = 0;
         _planetInstance.transform.position = worldPosition;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SolarSystem : MonoBehaviour
 {
-    private readonly List<Planet> _planets = new List<Planet>();
+    private readonly List<Planet> _planets = new();
     
     private void OnTriggerEnter(Collider other)
     {
@@ -18,8 +18,8 @@ public class SolarSystem : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.TryGetComponent(out Planet planet))
-            return;
-       RemovePlanet(planet);
+            return; 
+        RemovePlanet(planet);
     }
     
     private int GetAllPlanetsCount()
@@ -29,24 +29,29 @@ public class SolarSystem : MonoBehaviour
     
     public int CountPlanetsByType(Planet type)
     {
-        int count = 0;
-        foreach (Planet planet in _planets)
+        var count = 0;
+        foreach (var planet in _planets)
         {
             if (planet == type)
                 count++;
         }
+        Debug.Log("Count of " + type.GetPlanetName() + " : " + count);
         return count;
     }
-    
-    public void AddPlanet(Planet planet)
+
+    private void AddPlanet(Planet planet)
     {
-        if (!_planets.Contains(planet))
-            _planets.Add(planet);
+        if (_planets.Contains(planet)) 
+            return;
+        _planets.Add(planet);
+        Debug.Log("Planet added: " + planet.GetPlanetName());
     }
     
     public void RemovePlanet(Planet planet)
     {
-        if (_planets.Contains(planet))
-            _planets.Remove(planet);
+        if (!_planets.Contains(planet)) 
+            return;
+        _planets.Remove(planet);
+        Debug.Log("Planet removed: " + planet.GetPlanetName());
     }
 }
