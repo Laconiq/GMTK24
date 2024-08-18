@@ -29,5 +29,10 @@ public abstract class Celestial : MonoBehaviour
     
     // Getters and Setters
     public string GetPlanetName() { return celestialName; }
+
+    public float GetPlanetSpeed()
+    {
+        return GetComponent<Rigidbody>().velocity.magnitude;
+    }
     public virtual float GetTotalDistanceTraveled() { return _totalDistanceTraveled; }
 }
