@@ -103,6 +103,7 @@ public class Planet : Celestial
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sun") && _isLaunched)
+        {
             for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
             {
                 if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
@@ -111,11 +112,28 @@ public class Planet : Celestial
                     _indexAudioManager = i;
                 }
             }
-
+        }
         if (other.TryGetComponent(out Sun _) && _isLaunched)
             Die();
     }
-
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Sun") && _isLaunched)
+        {
+            for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
+            {
+                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == GetPlanetName())
+                {
+                    if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
+                    {
+                        VolumeModifier(i, 0);
+                    }
+                }
+            }
+        }
+    }
+    
     public void ShowPlanet()
     {
         if (!_isHidden || _cameraController.IsLookingAtPlanet())
@@ -132,25 +150,6 @@ public class Planet : Celestial
         _isHidden = true;
         GrowPlanet(false);
         _playerController.SetNearestCelestial(hoveredCelestial);
-    }
-    
-    private void OnTriggerExit(Collider other)
-    {
-
-        if (other.CompareTag("Sun") && _isLaunched)
-        {
-            for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
-            {
-                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == GetPlanetName())
-                {
-                    Debug.Log("Exit");
-                    if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
-                    {
-                        VolumeModifier(i, 0);
-                    }
-                }
-            }
-        }
     }
 
     public void SetPlanetVisibility(bool b)
@@ -171,14 +170,14 @@ public class Planet : Celestial
 
     private void VolumeModifier(int index, int volume)
     {
-        float duration = 2f;
+        Debug.Log("VolumeModifier");
+        var duration = 2f;
 
-        if (volume <= 0)
+        if (volume == 0)
         {
-            AudioManager.instance.FadeOut(index, duration);
+            AudioManager.Instance.FadeOut(index, duration);
         }
-        else AudioManager.instance.FadeIn(index, duration);
-        //AudioManager.instance.SetMusicVolume(index, volume);
+        else AudioManager.Instance.FadeIn(index, duration);
     }
 
     public void GrowPlanet(bool b)

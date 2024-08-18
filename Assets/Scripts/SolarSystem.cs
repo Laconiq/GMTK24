@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class SolarSystem : MonoBehaviour
@@ -23,11 +22,6 @@ public class SolarSystem : MonoBehaviour
         RemovePlanet(planet);
     }
     
-    private int GetAllPlanetsCount()
-    {
-        return _planets.Count;
-    }
-    
     public int CountPlanetsByType(Planet type)
     {
         var count = 0;
@@ -42,23 +36,19 @@ public class SolarSystem : MonoBehaviour
 
     private void AddPlanet(Planet planet)
     {
-        //if (_planets.Contains(planet)) 
-          //  return;
         _planets.Add(planet);
         Debug.Log("Planet added: " + planet.GetPlanetName());
         foreach (FMODEvents.MusicalCelestialObject MCO in FMODEvents.instance.systemeEnterCelestialList)
         {
             if (MCO.celestialObject.GetPlanetName() == planet.GetComponent<Planet>().GetPlanetName())
             {
-                AudioManager.instance.PlayOneShot(MCO.celestialMusic);
+                AudioManager.Instance.PlayOneShot(MCO.celestialMusic);
             }
         }
     }
     
     public void RemovePlanet(Planet planet)
     {
-        //if (!_planets.Contains(planet)) 
-          //  return;
         _planets.Remove(planet);
     }
 }

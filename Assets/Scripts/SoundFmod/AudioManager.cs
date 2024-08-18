@@ -6,21 +6,19 @@ using FMOD.Studio;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance { get; private set; }
-
-    private EventInstance musicEventInstance;
-
-    private List<EventInstance> musicCelestialEventInstances;
+    public static AudioManager Instance { get; private set; }
+    private EventInstance _musicEventInstance;
+    private List<EventInstance> _musicCelestialEventInstances;
 
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null)
         {
             Debug.LogError("Found more than one Audio Manager in the scene");
         }
-        instance = this;
+        Instance = this;
 
-        musicCelestialEventInstances = new List<EventInstance>();
+        _musicCelestialEventInstances = new List<EventInstance>();
     }
 
     private void Start()
@@ -46,13 +44,13 @@ public class AudioManager : MonoBehaviour
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
         return eventInstance;
-        //Si on veut faire des loops reprendre la vidéo à 24:00
+        //Si on veut faire des loops reprendre la vidï¿½o ï¿½ 24:00
     }
 
     private void InitializeMusic(EventReference musicEventReference)
     {
-        musicEventInstance = CreateEventInstance(musicEventReference);
-        musicEventInstance.start();
+        _musicEventInstance = CreateEventInstance(musicEventReference);
+        _musicEventInstance.start();
 
     }
 
@@ -60,26 +58,26 @@ public class AudioManager : MonoBehaviour
     {
         for (int i = 0; i < musicEventReferences.Length; i++)
         {
-            musicCelestialEventInstances.Add(CreateEventInstance(musicEventReferences[i].celestialMusic));
-            musicCelestialEventInstances[i].start();
-            musicCelestialEventInstances[i].setVolume(0);
+            _musicCelestialEventInstances.Add(CreateEventInstance(musicEventReferences[i].celestialMusic));
+            _musicCelestialEventInstances[i].start();
+            _musicCelestialEventInstances[i].setVolume(0);
         }
     }
 
     public void SetMusicVolume(int index, float volume)
     {
-        musicCelestialEventInstances[index].setVolume(volume);
+        _musicCelestialEventInstances[index].setVolume(volume);
     }
 
-    // Fonction pour lancer un fade in
     public void FadeIn(int index, float duration)
     {
+        Debug.Log("FadeIn");
         StartCoroutine(FadeVolume(index, 0.0f, 1.0f, duration));
     }
 
-    // Fonction pour lancer un fade out
     public void FadeOut(int index, float duration)
     {
+        Debug.Log("FadeOut");
         StartCoroutine(FadeVolume(index, 1.0f, 0.0f, duration));
     }
 
@@ -88,12 +86,12 @@ public class AudioManager : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        // Initialiser le volume de départ
+        // Initialiser le volume de dï¿½part
         SetMusicVolume(index, startVolume);
 
         while (elapsedTime < duration)
         {
-            // Calculer le volume actuel basé sur le temps écoulé
+            // Calculer le volume actuel basï¿½ sur le temps ï¿½coulï¿½
             elapsedTime += Time.deltaTime;
             float currentVolume = Mathf.Lerp(startVolume, targetVolume, elapsedTime / duration);
 
@@ -108,6 +106,6 @@ public class AudioManager : MonoBehaviour
         SetMusicVolume(index, targetVolume);
     }
 
-    //Regarder la vidéo à 26:00 pour des sons se basant sur la distance/spatialisation
-    //Crossfading music à 39:00
+    //Regarder la vidï¿½o ï¿½ 26:00 pour des sons se basant sur la distance/spatialisation
+    //Crossfading music ï¿½ 39:00
 }
