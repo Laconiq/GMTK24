@@ -54,6 +54,7 @@ public class CueController : MonoBehaviour
         var distance = direction.magnitude;
         _forceVector = direction.normalized * distance;
         _forceVector *= -forceModifier;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.CueStrike);
 
         // Clamp the force vector's magnitude between minForce and maxForce
         var clampedMagnitude = Mathf.Clamp(_forceVector.magnitude, minForce, maxForce);

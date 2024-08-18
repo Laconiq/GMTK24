@@ -78,6 +78,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  <CloseRadialMenu>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <music>k__BackingField:
     Guid:
       Data1: -1238375618
@@ -167,3 +174,12 @@ MonoBehaviour:
       Path: event:/mus-gmtk-planet-9
     <celestialObject>k__BackingField: {fileID: 6088336271799487833, guid: 5aba02e0084df40768670a1e1b453316,
       type: 3}
+  <hoverCelestialList>k__BackingField:
+  - <celestialMusic>k__BackingField:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    <celestialObject>k__BackingField: {fileID: 0}

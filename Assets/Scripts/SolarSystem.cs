@@ -32,7 +32,7 @@ public class SolarSystem : MonoBehaviour
         var count = 0;
         foreach (var planet in _planets)
         {
-            if (planet == type)
+            if (planet.GetPlanetName() == type.GetPlanetName())
                 count++;
         }
         Debug.Log("Count of " + type.GetPlanetName() + " : " + count);
@@ -41,16 +41,23 @@ public class SolarSystem : MonoBehaviour
 
     private void AddPlanet(Planet planet)
     {
-        if (_planets.Contains(planet)) 
-            return;
+        //if (_planets.Contains(planet)) 
+          //  return;
         _planets.Add(planet);
         Debug.Log("Planet added: " + planet.GetPlanetName());
+        foreach (FMODEvents.MusicalCelestialObject MCO in FMODEvents.instance.systemeEnterCelestialList)
+        {
+            if (MCO.celestialObject.GetPlanetName() == planet.GetComponent<Planet>().GetPlanetName())
+            {
+                AudioManager.instance.PlayOneShot(MCO.celestialMusic);
+            }
+        }
     }
     
     public void RemovePlanet(Planet planet)
     {
-        if (!_planets.Contains(planet)) 
-            return;
+        //if (!_planets.Contains(planet)) 
+          //  return;
         _planets.Remove(planet);
         Debug.Log("Planet removed: " + planet.GetPlanetName());
     }
