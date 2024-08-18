@@ -247,6 +247,21 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.minScalar
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5474384113181895783, guid: 3c084ffea37a4c74e9a308e56f7fb37e,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474384113181895783, guid: 3c084ffea37a4c74e9a308e56f7fb37e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 64aaef2d3e7aeaf4e85a09a949d22340, type: 2}
+    - target: {fileID: 5474384113181895783, guid: 3c084ffea37a4c74e9a308e56f7fb37e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 64aaef2d3e7aeaf4e85a09a949d22340, type: 2}
     - target: {fileID: 6101978871272782633, guid: 3c084ffea37a4c74e9a308e56f7fb37e,
         type: 3}
       propertyPath: m_Name
