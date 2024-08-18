@@ -3,51 +3,50 @@ using UnityEngine;
 
 public class SolarSystem : MonoBehaviour
 {
-    private readonly Dictionary<string, int> _planetCounts = new();
-
+    private readonly List<Planet> _planets = new List<Planet>();
+    
     private void OnTriggerEnter(Collider other)
     {
-        var planet = other.GetComponent<Planet>();
-        if (planet == null)
+        if (!other.TryGetComponent(out Planet planet))
             return;
-
-        string planetType = planet.GetPlanetName();
-        if (_planetCounts.ContainsKey(planetType))
-        {
-            _planetCounts[planetType]++;
-        }
-        else
-        {
-            _planetCounts[planetType] = 1;
-        }
+        
+        if (!planet.IsLaunched)
+            return;
+        AddPlanet(planet);
     }
-
+    
     private void OnTriggerExit(Collider other)
     {
-        var planet = other.GetComponent<Planet>();
-        if (planet == null)
+        if (!other.TryGetComponent(out Planet planet))
             return;
-
-        string planetType = planet.GetPlanetName();
-        if (_planetCounts.ContainsKey(planetType))
-        {
-            _planetCounts[planetType]--;
-            if (_planetCounts[planetType] <= 0)
-            {
-                _planetCounts.Remove(planetType);
-            }
-        }
+       RemovePlanet(planet);
     }
-
-    public int GetPlanetCount<T>(T planetIdentifier)
+    
+    private int GetAllPlanetsCount()
     {
-        string planetType = planetIdentifier switch
+        return _planets.Count;
+    }
+    
+    private int CountPlanetsByType(PlanetType type)
+    {
+        int count = 0;
+        foreach (Planet planet in _planets)
         {
-            string s => s,
-            Planet p => p.GetPlanetName(),
-            _ => throw new System.ArgumentException("Invalid type")
-        };
-
-        return _planetCounts.ContainsKey(planetType) ? _planetCounts[planetType] : 0;
+            if (planet.GetPlanetType() == type)
+                count++;
+        }
+        return count;
+    }
+    
+    public void AddPlanet(Planet planet)
+    {
+        if (!_planets.Contains(planet))
+            _planets.Add(planet);
+    }
+    
+    public void RemovePlanet(Planet planet)
+    {
+        if (_planets.Contains(planet))
+            _planets.Remove(planet);
     }
 }
