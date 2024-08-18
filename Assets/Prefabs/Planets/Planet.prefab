@@ -450,6 +450,7 @@ MonoBehaviour:
   celestialDescription: 
   growFeedback: {fileID: 2103968528566938051}
   shrinkFeedback: {fileID: 1607433473177660853}
+  maxDistanceFromSun: 800
 --- !u!54 &2212868309109590808
 Rigidbody:
   m_ObjectHideFlags: 0

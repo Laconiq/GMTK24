@@ -56,6 +56,7 @@ public class Planet : Celestial
         _sunMass = _sun.GetComponent<Rigidbody>().mass;
         _isLaunched = true;
         gameObject.layer = _defaultLayer;
+        InvokeRepeating(nameof(CheckDistanceFromSun), 5f, 5f);
     }
 
     protected override void FixedUpdate()
@@ -194,6 +195,17 @@ public class Planet : Celestial
                 shrinkFeedback.StopFeedbacks();
             growFeedback.PlayFeedbacks();
         }
+    }
+    
+    [SerializeField] private float maxDistanceFromSun = 1000f;
+    private void CheckDistanceFromSun()
+    {
+        if (_sun is null)
+            return;
+        
+        var distance = Vector3.Distance(transform.position, _sun.transform.position);
+        if (distance > maxDistanceFromSun)
+            Die();
     }
     
     // Getter and setter
