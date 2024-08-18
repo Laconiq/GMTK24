@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance musicEventInstance;
 
+    private EventInstance[] musicEventInstances;
+
     private void Awake()
     {
         if (instance != null)
@@ -43,6 +45,14 @@ public class AudioManager : MonoBehaviour
         musicEventInstance = CreateEventInstance(musicEventReference);
         musicEventInstance.start();
 
+    }
+
+    private void InitializeMusic(EventReference[] musicEventReferences)
+    {
+        foreach (EventReference eventRef in musicEventReferences)
+        {
+            musicEventInstances[eventRef.index] = eventRef.
+        }
     }
 
     //Regarder la vidéo à 26:00 pour des sons se basant sur la distance/spatialisation
