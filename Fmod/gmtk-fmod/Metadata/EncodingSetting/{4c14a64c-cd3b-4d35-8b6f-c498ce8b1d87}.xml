@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="EncodingSetting" id="{4c14a64c-cd3b-4d35-8b6f-c498ce8b1d87}">
-		<property name="encodingFormat">
-			<value>3</value>
-		</property>
 		<property name="quality">
 			<value>37</value>
 		</property>
