@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     public void Initialize()
     {
-        _gameManager = GameManager.instance;
+        _gameManager = GameManager.Instance;
         _cueController = _gameManager.GetCueController();
         _uiManager = _gameManager.GetUIManager();
         _cameraController = _gameManager.GetCameraController();
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
                     _cameraController.LookAt(null);
                 }
                 else 
-                    GameManager.instance.SetState(GameManager.GameState.Charging);
+                    GameManager.Instance.SetState(GameManager.GameState.Charging);
                 break;
             case GameManager.GameState.Charging:
                 break;

@@ -30,7 +30,8 @@ public class PlacingBallController : MonoBehaviour
         if (_planetInstance != null)
             Destroy(_planetInstance);
         _planetInstance = Instantiate(planetPrefab, Vector3.zero, Quaternion.identity);
-        GameManager.instance.SetCurrentPlanet(_planetInstance.GetComponent<Planet>());
+        GameManager.Instance.SetCurrentPlanet(_planetInstance.GetComponent<Planet>());
+        FollowMouse();
     }
 
     private void FollowMouse()

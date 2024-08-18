@@ -50,7 +50,7 @@ public class CueController : MonoBehaviour
         _forceVector = direction.normalized * distance;
         _forceVector *= -forceModifier;
 
-        var endPosition = GameManager.instance.GetCurrentPlanet().transform.position + _forceVector;
+        var endPosition = GameManager.Instance.GetCurrentPlanet().transform.position + _forceVector;
         shootPreview.DrawLine(endPosition);
     }
 
@@ -58,12 +58,12 @@ public class CueController : MonoBehaviour
     {
         if (!_isControllerActive)
             return;
-        var ballInstance = GameManager.instance.GetCurrentPlanet()?.gameObject;
+        var ballInstance = GameManager.Instance.GetCurrentPlanet()?.gameObject;
         if (ballInstance is null) 
             return;
         var planetScript = ballInstance.GetComponent<Planet>();
         planetScript?.SetVelocity(_forceVector);
         shootPreview.DisableLine();
-        GameManager.instance.SetState(GameManager.GameState.Shooting);
+        GameManager.Instance.SetState(GameManager.GameState.Shooting);
     }
 }

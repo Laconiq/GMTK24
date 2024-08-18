@@ -22,8 +22,8 @@ public class Planet : Celestial
         _rb = GetComponent<Rigidbody>();
         _sun = FindObjectOfType<Sun>();
         _rb.isKinematic = true;
-        _playerController = GameManager.instance.GetPlayerController();
-        _cameraController = GameManager.instance.GetCameraController();
+        _playerController = GameManager.Instance.GetPlayerController();
+        _cameraController = GameManager.Instance.GetCameraController();
         _model = transform.GetChild(0).gameObject;
         growFeedback.PlayFeedbacks();
     }

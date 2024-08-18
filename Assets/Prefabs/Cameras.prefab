@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAtCamera: {fileID: 2652935845251409275}
-  speed: 5
+  speed: 20
   minFOV: 45
   maxFOV: 75
   scrollSpeed: 1

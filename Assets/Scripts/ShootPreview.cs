@@ -21,7 +21,7 @@ public class ShootPreview : MonoBehaviour
     
     public void EnableLine()
     {
-        _currentPlanet = GameManager.instance.GetCurrentPlanet().transform;
+        _currentPlanet = GameManager.Instance.GetCurrentPlanet().transform;
         lineRenderer.enabled = true;
     }
     

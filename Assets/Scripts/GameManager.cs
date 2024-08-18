@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager Instance;
     
     private CueController _cueController;
     private PlacingBallController _placingBallController;
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
-        if (instance is null)
+        if (Instance is null)
             Initialize();
         else
             Destroy(gameObject);
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
         
         _playerController = FindObjectOfType<PlayerController>();

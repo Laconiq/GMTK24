@@ -9,6 +9,6 @@ public class ChoosePlanetButton : MonoBehaviour
     {
         if (planetPrefab == null)
             return;
-        GameManager.instance.GetPlacingBallController().ChangePlanet(planetPrefab);
+        GameManager.Instance.GetPlacingBallController().ChangePlanet(planetPrefab);
     }
 }
