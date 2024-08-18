@@ -27,7 +27,7 @@ public class SolarSystem : MonoBehaviour
         return _planets.Count;
     }
     
-    private int CountPlanetsByType(Planet type)
+    public int CountPlanetsByType(Planet type)
     {
         int count = 0;
         foreach (Planet planet in _planets)

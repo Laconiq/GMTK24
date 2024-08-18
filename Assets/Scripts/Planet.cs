@@ -102,7 +102,7 @@ public class Planet : Celestial
             {
                 if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
                 {
-                    VolumeModifier(i,1);
+                    VolumeModifier(i, 1);
                     indexAudioManager = i;
                 }
             }
@@ -110,8 +110,6 @@ public class Planet : Celestial
 
         if (other.TryGetComponent(out Sun _) && _isLaunched)
         {
-
-            VolumeModifier(indexAudioManager, 0);
             Die();
             return;
         }
@@ -136,7 +134,11 @@ public class Planet : Celestial
             {
                 if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
                 {
-                    VolumeModifier(i, 0);
+                    if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
+                    {
+                        Debug.Log("La musique devrait s'arrêter" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
+                        VolumeModifier(i, 0);
+                    }
                 }
             }
         }
@@ -159,6 +161,12 @@ public class Planet : Celestial
 
     private void Die()
     {
+        FindObjectOfType<SolarSystem>().RemovePlanet(this);
+        if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
+        {
+            VolumeModifier(indexAudioManager, 0);
+            Debug.Log("La musique devrait s'arrêter" + FindObjectOfType<SolarSystem>().CountPlanetsByType(this));
+        }
         Destroy(gameObject);
     }
 
