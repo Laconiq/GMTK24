@@ -230,12 +230,12 @@ MonoBehaviour:
   Path: Fmod/gmtk-fmod/Build/Desktop/sfx.bank
   Name: sfx
   StudioPath: bank:/sfx
-  lastModified: 638596034371307178
+  lastModified: 638596041304855281
   FileSizes:
   - Name: Desktop
-    Value: 998368
+    Value: 980800
   - Name: HTML5
-    Value: 998368
+    Value: 980800
   Exists: 1
 --- !u!114 &-5761557704128003586
 MonoBehaviour:
@@ -560,7 +560,7 @@ MonoBehaviour:
   - {fileID: 6009856303804657315}
   StringsBanks:
   - {fileID: 4800807486540340833}
-  cacheTime: 638596034371307178
+  cacheTime: 638596041304855281
   cacheVersion: 131619
 --- !u!114 &661499807508113867
 MonoBehaviour:
