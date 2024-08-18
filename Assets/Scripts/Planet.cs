@@ -66,7 +66,7 @@ public class Planet : Celestial
             return;
         }
         
-        if (!other.CompareTag("Celestial") || _isLaunched || _isHidden) 
+        if (!other.CompareTag("Celestial") || _isLaunched || _isHidden || _cameraController.IsLookingAtPlanet())
             return;
 
         _isHidden = true;
@@ -74,11 +74,12 @@ public class Planet : Celestial
             growFeedback.StopFeedbacks();
         shrinkFeedback.PlayFeedbacks();
         _playerController.SetNearestCelestial(other.transform);
+        FindObjectOfType<CustomCursor>().SetHoverCursor();
     }
     
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden) 
+        if (!other.CompareTag("Celestial") || _isLaunched || !_isHidden || _cameraController.IsLookingAtPlanet())
             return;
         _isHidden = false;
         _playerController.SetNearestCelestial(null);
@@ -87,6 +88,7 @@ public class Planet : Celestial
         if (shrinkFeedback.IsPlaying)
             shrinkFeedback.StopFeedbacks();
         growFeedback.PlayFeedbacks();
+        FindObjectOfType<CustomCursor>().SetDefaultCursor();
     }
 
     public void SetPlanetVisibility(bool b)

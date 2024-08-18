@@ -102,6 +102,8 @@ public class PlayerController : MonoBehaviour
         switch (_gameManager.GetGameState())
         {
             case GameManager.GameState.PlacingBall:
+                if (_cameraController.IsLookingAtPlanet())
+                    return;
                 StopCoroutine(_checkUIElementUnderMouseCoroutine);
                 _uiManager.OpenRadialMenu(false);
                 break;
