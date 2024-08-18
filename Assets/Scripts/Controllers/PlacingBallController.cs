@@ -6,11 +6,12 @@ public class PlacingBallController : MonoBehaviour
     [SerializeField] private GameObject defaultPlanetPrefab;
     private GameObject _planetInstance;
     private bool _isControllerActive;
+    private GameObject _lastPlanetPrefab;
 
     public void EnableControls()
     {
         _planetInstance = null;
-        ChangePlanet(defaultPlanetPrefab);
+        ChangePlanet(_lastPlanetPrefab != null ? _lastPlanetPrefab : defaultPlanetPrefab);
         _isControllerActive = true;
     }
 
@@ -31,6 +32,7 @@ public class PlacingBallController : MonoBehaviour
             Destroy(_planetInstance);
         _planetInstance = Instantiate(planetPrefab, Vector3.zero, Quaternion.identity);
         GameManager.Instance.SetCurrentPlanet(_planetInstance.GetComponent<Planet>());
+        _lastPlanetPrefab = planetPrefab;
         FollowMouse();
     }
 
