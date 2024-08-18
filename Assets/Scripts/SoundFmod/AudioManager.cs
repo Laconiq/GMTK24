@@ -71,6 +71,43 @@ public class AudioManager : MonoBehaviour
         musicCelestialEventInstances[index].setVolume(volume);
     }
 
+    // Fonction pour lancer un fade in
+    public void FadeIn(int index, float duration)
+    {
+        StartCoroutine(FadeVolume(index, 0.0f, 1.0f, duration));
+    }
+
+    // Fonction pour lancer un fade out
+    public void FadeOut(int index, float duration)
+    {
+        StartCoroutine(FadeVolume(index, 1.0f, 0.0f, duration));
+    }
+
+    // Coroutine pour ajuster le volume progressivement
+    private IEnumerator FadeVolume(int index, float startVolume, float targetVolume, float duration)
+    {
+        float elapsedTime = 0f;
+
+        // Initialiser le volume de départ
+        SetMusicVolume(index, startVolume);
+
+        while (elapsedTime < duration)
+        {
+            // Calculer le volume actuel basé sur le temps écoulé
+            elapsedTime += Time.deltaTime;
+            float currentVolume = Mathf.Lerp(startVolume, targetVolume, elapsedTime / duration);
+
+            // Appliquer le volume
+            SetMusicVolume(index, currentVolume);
+
+            // Attendre le frame suivant
+            yield return null;
+        }
+
+        // Assurer que le volume atteint exactement la cible
+        SetMusicVolume(index, targetVolume);
+    }
+
     //Regarder la vidéo à 26:00 pour des sons se basant sur la distance/spatialisation
     //Crossfading music à 39:00
 }
