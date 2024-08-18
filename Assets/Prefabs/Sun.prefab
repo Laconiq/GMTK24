@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2572838094769696005}
   - component: {fileID: 5132191381316937539}
   - component: {fileID: 4885183135514518125}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MusicTrigger
-  m_TagString: Untagged
+  m_TagString: Sun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
