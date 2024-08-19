@@ -3,11 +3,10 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     [SerializeField] private Texture2D defaultCursor;
-    [SerializeField] private Texture2D clickCursor;
     [SerializeField] private Texture2D hoverCursor;
 
-    public CursorMode cursorMode = CursorMode.Auto;
-    public Vector2 hotSpot = Vector2.zero;
+    private const CursorMode CursorMode = UnityEngine.CursorMode.Auto;
+    private Vector2 _hotSpot;
     private LayerMask _ignoreLayer;
     private bool _isDefaultCursor;
     private PlacingBallController _placingBallController;
@@ -15,6 +14,9 @@ public class MouseController : MonoBehaviour
 
     private void Start()
     {
+        if (defaultCursor is null || hoverCursor is null)
+            Debug.LogError("Cursor texture not set in MouseController");
+        
         _ignoreLayer = LayerMask.GetMask("Ignore Raycast");
         _placingBallController = GameManager.Instance.GetPlacingBallController();
         _mainCamera = Camera.main;
@@ -26,7 +28,8 @@ public class MouseController : MonoBehaviour
         if (_isDefaultCursor)
             return;
         _isDefaultCursor = true;
-        Cursor.SetCursor(defaultCursor, hotSpot, cursorMode);
+        _hotSpot = new Vector2(defaultCursor.width / 2, defaultCursor.height / 2);
+        Cursor.SetCursor(defaultCursor, _hotSpot, CursorMode);
     }
 
     private void SetHoverCursor()
@@ -34,16 +37,17 @@ public class MouseController : MonoBehaviour
         if (!_isDefaultCursor)
             return;
         _isDefaultCursor = false;
-        Cursor.SetCursor(hoverCursor, hotSpot, cursorMode);
+        _hotSpot = new Vector2(hoverCursor.width / 2, hoverCursor.height / 2);
+        Cursor.SetCursor(hoverCursor, _hotSpot, CursorMode);
     }
 
+    private Ray _mouseRay;
+    public Ray GetMouseRay() { return _mouseRay; }
     private void Update()
     {
-        var ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+        UpdateMouseRay();
         
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
-        
-        if (!Physics.Raycast(ray, out var hit, Mathf.Infinity, ~_ignoreLayer))
+        if (!Physics.Raycast(_mouseRay, out var hit, Mathf.Infinity, ~_ignoreLayer))
         {
             SetDefaultCursor();
             _placingBallController.GetPlanetInstance()?.GetComponent<Planet>().ShowPlanet();
@@ -61,5 +65,10 @@ public class MouseController : MonoBehaviour
 
         SetHoverCursor();
         currentPlanet.GetComponent<Planet>().HidePlanet(celestial.transform);
+    }
+
+    private void UpdateMouseRay()
+    {
+        _mouseRay = _mainCamera.ScreenPointToRay(Input.mousePosition);
     }
 }
