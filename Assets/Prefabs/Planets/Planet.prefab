@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   celestialName: 
   celestialDescription: 
+  _distanceToSunToStopOrbit: 100
   growFeedback: {fileID: 2103968528566938051}
   shrinkFeedback: {fileID: 1607433473177660853}
   maxDistanceFromSun: 800

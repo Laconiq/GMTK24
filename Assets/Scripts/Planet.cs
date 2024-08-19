@@ -18,7 +18,11 @@ public class Planet : Celestial
     private bool _planetIsInSunRange;
     private float _rngOrbitalInfluence;
     private int _rngIsAfflicted;
+    private float _speedRngStopCorrecting;
     private int _indexAudioManager;
+
+    [Header("Gravity Tweak")]
+    [SerializeField] private float _distanceToSunToStopOrbit = 70;
 
     [Header("Feedbacks")]
     [SerializeField] private MMF_Player growFeedback;
@@ -44,7 +48,8 @@ public class Planet : Celestial
         gameObject.layer = _ignoreRaycastLayer;
 
         _rngOrbitalInfluence = Random.Range(0f, 1f);
-        _rngIsAfflicted = Random.Range(0, 2);
+        _rngIsAfflicted = Random.Range(0, 4);
+        _speedRngStopCorrecting = Random.Range(0f, 1f);
     }
 
     public void SetVelocity(Vector3 velocity)
@@ -77,7 +82,7 @@ public class Planet : Celestial
         var force = forceDirection * (_sun.gravitationalConstant * (_sunMass * _rb.mass / distanceToSun));
 
         #region Orbital Correction
-        if (_rngIsAfflicted==1)
+        if (_rngIsAfflicted<=3)
         {
             var idealOrbitalVelocity = Mathf.Sqrt(_sun.gravitationalConstant * _sunMass / Mathf.Sqrt(distanceToSun));
 
@@ -95,6 +100,13 @@ public class Planet : Celestial
             else 
                 speedCorrection = (idealOrbitalVelocity - currentSpeed) * Time.fixedDeltaTime;
             _rb.velocity += orbitalVelocityDirection * speedCorrection;
+            var speedDiff = Mathf.Abs(idealOrbitalVelocity - currentSpeed);
+            if (_speedRngStopCorrecting > speedDiff && directionToSun.magnitude<_distanceToSunToStopOrbit)
+            {
+                Debug.Log(_speedRngStopCorrecting + "_rn");
+                _rngIsAfflicted = 4;
+            }
+                
         }
         #endregion
 
