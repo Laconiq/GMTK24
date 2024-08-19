@@ -59,9 +59,9 @@ public class Planet : Celestial
         InvokeRepeating(nameof(CheckDistanceFromSun), 5f, 5f);
     }
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
         ApplyGravity();
     }
 
