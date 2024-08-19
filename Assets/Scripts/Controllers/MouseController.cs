@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CustomCursor : MonoBehaviour
+public class MouseController : MonoBehaviour
 {
     [SerializeField] private Texture2D defaultCursor;
     [SerializeField] private Texture2D clickCursor;
@@ -11,11 +11,13 @@ public class CustomCursor : MonoBehaviour
     private LayerMask _ignoreLayer;
     private bool _isDefaultCursor;
     private PlacingBallController _placingBallController;
+    private Camera _mainCamera;
 
     private void Start()
     {
         _ignoreLayer = LayerMask.GetMask("Ignore Raycast");
         _placingBallController = GameManager.Instance.GetPlacingBallController();
+        _mainCamera = Camera.main;
         SetDefaultCursor();
     }
 
@@ -37,7 +39,10 @@ public class CustomCursor : MonoBehaviour
 
     private void Update()
     {
-        var ray = Camera.main!.ScreenPointToRay(Input.mousePosition);
+        var ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
+        
+        Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
+        
         if (!Physics.Raycast(ray, out var hit, Mathf.Infinity, ~_ignoreLayer))
         {
             SetDefaultCursor();

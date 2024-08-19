@@ -74,6 +74,6 @@ public class CueController : MonoBehaviour
         planetScript?.SetVelocity(_forceVector);
         _shootPreview.DisableLine();
         GameManager.Instance.SetState(GameManager.GameState.Shooting);
-        AudioManager.Instance.PlayOneShot(FMODEvents.instance.CueStrike);
+        AudioManager.PlayOneShot(FMODEvents.instance.CueStrike);
     }
 }

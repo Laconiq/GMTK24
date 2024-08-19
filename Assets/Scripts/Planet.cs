@@ -103,7 +103,6 @@ public class Planet : Celestial
             var speedDiff = Mathf.Abs(idealOrbitalVelocity - currentSpeed);
             if (_speedRngStopCorrecting > speedDiff && directionToSun.magnitude<_distanceToSunToStopOrbit)
             {
-                Debug.Log(_speedRngStopCorrecting + "_rn");
                 _rngIsAfflicted = 4;
             }
                 
@@ -119,11 +118,10 @@ public class Planet : Celestial
         {
             for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
             {
-                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == this.GetPlanetName())
-                {
-                    VolumeModifier(i, 1);
-                    _indexAudioManager = i;
-                }
+                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() != GetPlanetName()) 
+                    continue;
+                VolumeModifier(i, 1);
+                _indexAudioManager = i;
             }
         }
         if (other.TryGetComponent(out Sun _) && _isLaunched)
@@ -132,18 +130,14 @@ public class Planet : Celestial
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Sun") && _isLaunched)
+        if (!other.CompareTag("Sun") || !_isLaunched) 
+            return;
+        for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
         {
-            for (var i = 0; i < FMODEvents.instance.musicalCelestialList.Length; i++)
-            {
-                if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() == GetPlanetName())
-                {
-                    if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
-                    {
-                        VolumeModifier(i, 0);
-                    }
-                }
-            }
+            if (FMODEvents.instance.musicalCelestialList[i].celestialObject.GetPlanetName() != GetPlanetName()) 
+                continue;
+            if (FindObjectOfType<SolarSystem>().CountPlanetsByType(this) <= 0)
+                VolumeModifier(i, 0);
         }
     }
     
@@ -183,13 +177,9 @@ public class Planet : Celestial
 
     private void VolumeModifier(int index, int volume)
     {
-        Debug.Log("VolumeModifier");
-        var duration = 2f;
-
+        const float duration = 2f;
         if (volume == 0)
-        {
             AudioManager.Instance.FadeOut(index, duration);
-        }
         else AudioManager.Instance.FadeIn(index, duration);
     }
 
@@ -214,7 +204,6 @@ public class Planet : Celestial
     {
         if (_sun is null)
             return;
-        
         var distance = Vector3.Distance(transform.position, _sun.transform.position);
         if (distance > maxDistanceFromSun)
             Die();

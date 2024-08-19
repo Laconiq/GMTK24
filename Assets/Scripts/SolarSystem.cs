@@ -40,7 +40,7 @@ public class SolarSystem : MonoBehaviour
         {
             if (MCO.celestialObject.GetPlanetName() == planet.GetComponent<Planet>().GetPlanetName())
             {
-                AudioManager.Instance.PlayOneShot(MCO.celestialMusic);
+                AudioManager.PlayOneShot(MCO.celestialMusic);
             }
         }
     }

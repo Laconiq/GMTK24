@@ -14,7 +14,7 @@ public class ChoosePlanetButton : MonoBehaviour
         {
             if (MCO.celestialObject.GetPlanetName() == planetPrefab.GetComponent<Planet>().GetPlanetName())
             {
-                AudioManager.Instance.PlayOneShot(MCO.celestialMusic);
+                AudioManager.PlayOneShot(MCO.celestialMusic);
             }
         }
     }

@@ -714,7 +714,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 275073662250056721}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &4143625937077937095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1340359436013828628, guid: 2e8d5b3e49e4746eebf502df918dc96f,

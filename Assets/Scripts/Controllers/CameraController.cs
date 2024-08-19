@@ -74,7 +74,7 @@ public class CameraController : MonoBehaviour
 
         if (target is null)
         {
-            AudioManager.Instance.PlayOneShot(FMODEvents.instance.ZoomOut);
+            AudioManager.PlayOneShot(FMODEvents.instance.ZoomOut);
             gameObject.transform.rotation = _defaultRotation;
             _isLookingAtPlanet = false;
 
@@ -87,7 +87,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            AudioManager.Instance.PlayOneShot(FMODEvents.instance.ZoomIn);
+            AudioManager.PlayOneShot(FMODEvents.instance.ZoomIn);
             lookAtCamera.Priority = 11;
             _virtualCamera.Priority = 9;
             

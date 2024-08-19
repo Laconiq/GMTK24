@@ -13,8 +13,9 @@ public class PlacingBallController : MonoBehaviour
     public void EnableControls()
     {
         _planetInstance = null;
-        ChangePlanet(_lastPlanetPrefab != null ? _lastPlanetPrefab : defaultPlanetPrefab);
+        ChangePlanet(_lastPlanetPrefab ? _lastPlanetPrefab : defaultPlanetPrefab);
         _isControllerActive = true;
+        _mainCamera = Camera.main;
     }
 
     public void DisableControls()
@@ -38,6 +39,8 @@ public class PlacingBallController : MonoBehaviour
         FollowMouse();
     }
 
+    private Camera _mainCamera;
+    
     private void FollowMouse()
     {
         if (!_isControllerActive)
@@ -47,8 +50,12 @@ public class PlacingBallController : MonoBehaviour
             return;
 
         var mousePosition = Mouse.current.position.ReadValue();
-        var ray = Camera.main!.ScreenPointToRay(mousePosition);
-
+        
+        // Adjusting the mouse position to match the planet's position
+        mousePosition.y -= 17;
+        mousePosition.x += 15;
+        
+        var ray = _mainCamera.ScreenPointToRay(mousePosition);
         if (!Physics.Raycast(ray, out var hit, Mathf.Infinity, groundLayerMask))
             return;
 
