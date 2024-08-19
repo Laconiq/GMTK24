@@ -74,10 +74,9 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+
+# FMOD
 fmod_editor.log
-
 Assets/Plugins/FMOD/platforms/win/lib/x86_64/fmodstudioL.dll
-
-Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
-
+Assets/Plugins/FMOD/Cache/
 Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
