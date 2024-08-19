@@ -30,14 +30,12 @@ public class SolarSystem : MonoBehaviour
             if (planet.GetPlanetName() == type.GetPlanetName())
                 count++;
         }
-        Debug.Log("Count of " + type.GetPlanetName() + " : " + count);
         return count;
     }
 
     private void AddPlanet(Planet planet)
     {
         _planets.Add(planet);
-        Debug.Log("Planet added: " + planet.GetPlanetName());
         foreach (FMODEvents.MusicalCelestialObject MCO in FMODEvents.instance.systemeEnterCelestialList)
         {
             if (MCO.celestialObject.GetPlanetName() == planet.GetComponent<Planet>().GetPlanetName())

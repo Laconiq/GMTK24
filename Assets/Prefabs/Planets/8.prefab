@@ -558,26 +558,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
-        type: 3}
-      propertyPath: m_Time
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e6bad9ea112e37541a584bb2ba89d3b7, type: 2}
-    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
-        type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5925750194553392230, guid: 2e8d5b3e49e4746eebf502df918dc96f,
-        type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 7773285922120345750, guid: 2e8d5b3e49e4746eebf502df918dc96f,
         type: 3}
       propertyPath: rotationSpeed

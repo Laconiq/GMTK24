@@ -14,7 +14,7 @@ public abstract class Celestial : MonoBehaviour
         _lastPosition = transform.position;
     }
     
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
         UpdateDistanceTraveled();
     }
