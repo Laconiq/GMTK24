@@ -81,6 +81,7 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{fc41e7bc-a561-4a90-b2f6-7717372d3834}</destination>
+			<destination>{52920002-0d91-4e1d-b85f-6346133fd0c2}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{619f6156-d01e-4dae-b9b9-43459ab30160}">
@@ -119,8 +120,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{c5a30653-9526-40a9-bc8f-18987e826c8d}" />
 	<object class="SingleSound" id="{3686f1f7-aa74-437f-b803-68f0ca20fa05}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>128</value>
+		</property>
+		<property name="quantizationInterval">
+			<value>2</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{47883282-22d4-42fa-a841-b35885fa3877}</destination>
@@ -141,7 +148,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{a65f5cf5-948c-4a0e-921c-31359ebdc0cc}">
 		<property name="volume">
-			<value>-1</value>
+			<value>-9</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -171,6 +178,20 @@
 		</relationship>
 		<relationship name="transitionTimeline">
 			<destination>{854dfbfb-d2e9-4dec-8976-9c3a7ee7530c}</destination>
+		</relationship>
+	</object>
+	<object class="TempoMarker" id="{52920002-0d91-4e1d-b85f-6346133fd0c2}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="tempo">
+			<value>90</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{3e10c99f-ef0b-47d8-999e-ffdfe1179239}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{f9764b27-ff8c-46f5-8a83-1b32b944ba02}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{751c0d69-3602-4a97-9ab0-3d20be5c1dd6}">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="SandboxScene" id="{2ebd2a16-40e5-49c4-8d61-f8bad8654756}">
+		<property name="name">
+			<value>mus-test-gmtk-planet</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5ce6ba2d-a75a-493f-a280-c94c5678c2b8}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{e447c411-4db3-4ad6-af07-f1a523cbcf87}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{f3286a81-9248-4fa0-88e3-c5e36b0a08b9}</destination>
+		</relationship>
+	</object>
+	<object class="MarkerTrack" id="{e447c411-4db3-4ad6-af07-f1a523cbcf87}" />
+	<object class="Timeline" id="{f3286a81-9248-4fa0-88e3-c5e36b0a08b9}" />
+</objects>

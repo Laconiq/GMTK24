@@ -23,6 +23,7 @@
 			<destination>{aa7ab6e4-ef54-474e-b09a-8e076cdfb9dc}</destination>
 		</relationship>
 		<relationship name="markerTracks">
+			<destination>{ebed5228-ecc2-4e48-9e2b-b165b87a5dbc}</destination>
 			<destination>{7edc943a-0ba1-498d-b464-e07d7f51e2ef}</destination>
 		</relationship>
 		<relationship name="groupTracks">
@@ -64,6 +65,7 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{aa7ab6e4-ef54-474e-b09a-8e076cdfb9dc}" />
+	<object class="MarkerTrack" id="{ebed5228-ecc2-4e48-9e2b-b165b87a5dbc}" />
 	<object class="MarkerTrack" id="{7edc943a-0ba1-498d-b464-e07d7f51e2ef}" />
 	<object class="GroupTrack" id="{e769b118-c289-4172-886f-e949aed72341}">
 		<relationship name="modules">
@@ -81,6 +83,7 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{094446a4-1545-4660-945f-b88b41e7fa7c}</destination>
+			<destination>{01c50af6-e40a-4a97-8ab9-4640a06f3ecd}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{13cebaa8-0cc7-4102-a514-b644d8b46e16}">
@@ -119,8 +122,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{95e08989-010b-40ed-b185-a9744b11e2cf}" />
 	<object class="SingleSound" id="{45a9b4dc-ac62-461e-b378-f13e72a77f39}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>128</value>
+		</property>
+		<property name="quantizationInterval">
+			<value>2</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{db3274ac-b14f-40ac-ae4a-9e0b647c152c}</destination>
@@ -174,6 +183,20 @@
 		</relationship>
 		<relationship name="transitionTimeline">
 			<destination>{67482735-a5d6-496e-87ec-a1bf2cebab23}</destination>
+		</relationship>
+	</object>
+	<object class="TempoMarker" id="{01c50af6-e40a-4a97-8ab9-4640a06f3ecd}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="tempo">
+			<value>90</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{9c0f44c7-a151-4234-9399-76a139ccbd34}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{ebed5228-ecc2-4e48-9e2b-b165b87a5dbc}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f84aa45e-3960-466a-a765-7c411d7f0ab6}">

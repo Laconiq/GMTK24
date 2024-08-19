@@ -23,6 +23,7 @@
 			<destination>{d16fd256-be6e-4ef2-837a-01d8fd895ed2}</destination>
 		</relationship>
 		<relationship name="markerTracks">
+			<destination>{5422e1cb-327a-4e20-97d9-cbc6ae810a81}</destination>
 			<destination>{bf8a2cdc-b3f0-44c2-98a2-22ef9a491dc0}</destination>
 		</relationship>
 		<relationship name="groupTracks">
@@ -64,6 +65,7 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{d16fd256-be6e-4ef2-837a-01d8fd895ed2}" />
+	<object class="MarkerTrack" id="{5422e1cb-327a-4e20-97d9-cbc6ae810a81}" />
 	<object class="MarkerTrack" id="{bf8a2cdc-b3f0-44c2-98a2-22ef9a491dc0}" />
 	<object class="GroupTrack" id="{94ae4c75-18ff-4adc-b32f-2f98d82c9558}">
 		<relationship name="modules">
@@ -81,6 +83,7 @@
 		</relationship>
 		<relationship name="markers">
 			<destination>{7fb53f4b-3f61-495e-821b-c32bf00e5d6d}</destination>
+			<destination>{cdad609d-eb9a-4b4d-9faa-48e4d064ba69}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterProxy" id="{c919f7ec-a4b2-48d8-846e-98e250adc949}">
@@ -119,8 +122,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{9910ccdc-353a-405f-ae08-8d9e681304c2}" />
 	<object class="SingleSound" id="{3cbf5f66-0cf2-4903-9e63-1032a3a6b567}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>128</value>
+		</property>
+		<property name="quantizationInterval">
+			<value>2</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{36bb2ad5-3d99-4d27-a3f8-9da08b6a720f}</destination>
@@ -144,7 +153,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{f2151572-6da5-487f-bfc7-9232d53fd92a}">
 		<property name="volume">
-			<value>-1</value>
+			<value>-5.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -174,6 +183,20 @@
 		</relationship>
 		<relationship name="transitionTimeline">
 			<destination>{0e00122f-6146-45ca-abe9-edeba12026a9}</destination>
+		</relationship>
+	</object>
+	<object class="TempoMarker" id="{cdad609d-eb9a-4b4d-9faa-48e4d064ba69}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="tempo">
+			<value>90</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{1e6f5231-e3c1-4b39-9894-6b64f9ec6b78}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{5422e1cb-327a-4e20-97d9-cbc6ae810a81}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{d66da3f8-5a1f-4c31-a060-a4ec92f86300}">
